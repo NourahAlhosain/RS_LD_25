@@ -2,11 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "learning_diary_CASA00023_NH",
+    "title": "CASA00023 Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Overview\nWelcome to my learning diary, where I will reflect on my weekly engagement with course content, readings, and practical materials using Quarto in R. Each book will highlight key insights and applications of the concepts discussed, capturing what I have learned and found interesting each week. The structure of my diary includes a summary of the weekly material, an exploration of how these concepts have been applied in literature or policy, and personal reflections that contextualize the skills and knowledge gained, considering their relevance and potential future applications based on my interests.\n\ndon’t forget to add a header\n\n\n\nAbout me\nHello, this is Norah",
     "crumbs": [
-      "Preface"
+      "Overview"
     ]
   },
   {
@@ -37,6 +37,26 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "W2_Xaringan.html",
+    "href": "W2_Xaringan.html",
+    "title": "2  Xaringan",
+    "section": "",
+    "text": "xaringanExtra::embed_xaringan(url = “https://grolls23.github.io/CASA0023Wk2/”, ratio = “16:9”)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "W2_Xaringan.html#reflections-on-xaringan",
+    "href": "W2_Xaringan.html#reflections-on-xaringan",
+    "title": "2  Xaringan Tool",
+    "section": "2.2 Reflections on Xaringan",
+    "text": "2.2 Reflections on Xaringan",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Tool</span>"
     ]
   }
 ]

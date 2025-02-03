@@ -2,14 +2,16 @@ project:
   type: book
 
 book:
-  title: "learning_diary_CASA00023_NH"
+  title: "CASA00023 Learning Diary"
   author: "Norah Alhosain"
   date: "1/22/2025"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - W2_Xaringan.qmd
     - references.qmd
+title-block-banner: true
+
 
 bibliography: references.bib
 

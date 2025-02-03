@@ -1,0 +1,23 @@
+---
+title: "Xaringan Tool"
+---
+
+
+
+<div style="text-align: justify;">
+This week, we were tasked with creating a presentation using <strong>Xaringan</strong>, an R package for building dynamic and reproducible slides with <strong>R Markdown</strong>. The assignment followed the usual structure of <strong>summary</strong>, <strong>applications</strong>, and <strong>reflections</strong>, but with a twist: presenting it through Xaringan.
+
+For the content, I initially considered well-known satellites like Landsat and Sentinel, but I chose to explore a less familiar sensor to expand my knowledge. I selected the <strong>Total Ozone Mapping Spectrometer (TOMS)</strong>, a groundbreaking sensor that transformed our understanding of the ozone layer and atmospheric composition. The presentation highlights its <strong>design</strong>, <strong>purpose</strong>, and <strong>applications</strong>, and concludes with reflections on what I learned about TOMS, its applications, and its potential for future use in addressing global environmental challenges.
+</div>
+
+
+
+## Presentation 
+
+* update link once added to Github
+```{r echo= FALSE}
+xaringanExtra::embed_xaringan(url = "",  ratio = "16:9")
+```
+
+
+## Reflections on Xaringan
