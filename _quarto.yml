@@ -1,6 +1,6 @@
 project:
   type: book
-
+#https://quarto.org/docs/output-formats/html-themes.html
 book:
   title: "CASA00023 Learning Diary"
   author: "Norah Alhosain"
@@ -9,8 +9,18 @@ book:
     - index.qmd
     - intro.qmd
     - W2_Xaringan.qmd
+    - W3_Corrections.qmd
+    - W4_Policy.qmd
+    - W6_GEE.qmd
     - references.qmd
-title-block-banner: true
+  search: true
+  #repo-url: 
+ # title-block-banner: true
+ # favicon: logo.png
+  sidebar:
+    style: docked
+    background: light
+
 
 
 bibliography: references.bib
@@ -18,7 +28,7 @@ bibliography: references.bib
 format:
   html:
     theme:
-      - cosmo
+      - Simplex
       - brand
   pdf:
     documentclass: scrreprt
