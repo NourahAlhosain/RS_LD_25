@@ -10,10 +10,8 @@ For the content, I initially considered well-known satellites like Landsat and S
 
 ## Presentation
 
--   update link once added to Github
-
 ```{r echo= FALSE}
-xaringanExtra::embed_xaringan(url = "",  ratio = "16:9")
+xaringanExtra::embed_xaringan(url = "https://nourahalhosain.github.io/RS_Xaringan/",  ratio = "4:3")
 ```
 
 ## Reflections on Xaringan
