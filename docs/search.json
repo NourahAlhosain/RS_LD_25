@@ -8,5 +8,185 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
+  },
+  {
+    "objectID": "W2_Xaringan.html",
+    "href": "W2_Xaringan.html",
+    "title": "2  Xaringan Tool",
+    "section": "",
+    "text": "2.1 Presentation",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Tool</span>"
+    ]
+  },
+  {
+    "objectID": "W2_Xaringan.html#reflections-on-xaringan",
+    "href": "W2_Xaringan.html#reflections-on-xaringan",
+    "title": "2  Xaringan Tool",
+    "section": "2.2 Reflections on Xaringan",
+    "text": "2.2 Reflections on Xaringan",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Tool</span>"
+    ]
+  },
+  {
+    "objectID": "W3_Corrections.html",
+    "href": "W3_Corrections.html",
+    "title": "3  Corrections and Enhancements",
+    "section": "",
+    "text": "3.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "W3_Corrections.html#summary",
+    "href": "W3_Corrections.html#summary",
+    "title": "3  Corrections and Enhancements",
+    "section": "",
+    "text": "This week, the lecture covered the essentials of preparing and enhancing satellite imagery for analysis, splitting the content into two main parts. The first part focuses on corrections and its different categories: geometric correction aligns distorted images using Ground Control Points (we discussed how to pick these points, noting that features like vegetation are poor choices since they change over time, making them unreliable for ensuring spatial accuracy); atmospheric correction removes haze and scattering effects through methods like Dark Object Subtraction or radiative transfer models; topographic correction adjusts for terrain distortions using elevation models ; and radiometric correction converts Digital Numbers to spectral radiance with gain and bias. The second part covers joining datasets and enhancements: Mosaicking combines overlapping images using feathering to blend them smoothly, adjusting brightness so the edges match seamlessly. Enhancements include contrast stretching to amplify visibility, using band ratios to show things like vegetation more clearly, and applying Principal Component Analysis to simplify complicated data into essential components.\nWith that being said, it’s important to mention that remote sensing products now often come pre-corrected and enhanced. Yet, understanding these processes remains crucial, as it empowers users to evaluate data quality, address specific project needs, and adjust workflows across diverse satellite sources. As I was trying to understand Analysis Ready Data (ARD), this article helped me understand ARD’s core processing concepts. In addition, this week’s practical highlighted how each satellite offers unique products, and how collections—systematically organized groups of satellite imagery—are categorized into different processing levels, which indicate the degree of preprocessing applied to the data. For instance, Level 1 data includes raw or minimally processed imagery, while higher levels, like Level 3, provide specialized outputs such as vegetation indices or land cover classifications, ready for direct use in applications (Figure 1). ARD brings clear benefits, including time savings, consistency, and accessibility that lowers technical barriers for users. However, its standardized processing may not account for regional variations, such as unique atmospheric conditions or terrain complexities, potentially reducing accuracy in specific contexts. Also, reliance on ARD can lead to a lack of transparency in the preprocessing steps, making it difficult for users to assess or modify the corrections applied. Thus, while ARD streamlines workflows, it is not a one-size-fits-all solution and recognizing its limitations is key to leveraging it effectively.\n\n\n\nFigure 1 - From left to right: (1) Sentinel-2 Level-1C TOA reflectance input image, (2) the atmospherically corrected Level-2A surface reflectance image, (3) the output scene classification of the Level-1C product - Source: European Space Agency, link\n\n\n\n\n3.1.1 Dictionary for some new terminologies I learned this week\n\n\n\n\n\n\n\n\n\nTerminology\nMeaning\n\n\n\n\nAnalysis Ready Data\nPre-processed and formatted data that is immediately usable for analysis.\n\n\nAtmospheric attenuation\nThe reduction of signal strength as electromagnetic waves pass through the atmosphere.\n\n\nFeathering\nA technique used to blend the edges of images or data from different sources to create a seamless appearance.\n\n\nImage fusion\nWhen data from multiple sensors/sources is fused together.\n\n\nIrradiance\nDownwelling radiation reaching the Earth from the sun.\n\n\nMosaicking\nThe process of combining multiple satellite images into a single, larger image.\n\n\nNadir\nThe point on the ground directly beneath a satellite or sensor.\n\n\nPath radiance\nRadiance reflected above the surface (before reaching the sensor).\n\n\nPseudo-invariant Features\nAreas on the Earth’s surface that remain relatively unchanged over time.\n\n\nPush broom\nA sensor that moves in a straight line, continuously capturing data across a wide area.\n\n\nRadiance\nAny radiation leaving the Earth.\n\n\nSurface Reflectance\nProportion of light reflected by the Earth’s surface.\n\n\nSpectral radiance\nThe amount of light within a band from a sensor in the field of view (FOV).\n\n\nSolar Azimuth\nThe angle between the sun and true north.\n\n\nSolar Zenith Angle\nThe angle between the local zenith (directly above) and the sun.\n\n\nWhisk broom\nA sensor that scans side to side, capturing data line by line.\n\n\n\n\n\n* Note: Definitions are based on my understanding, lecture notes, and several academic articles.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "W3_Corrections.html#applications",
+    "href": "W3_Corrections.html#applications",
+    "title": "3  Corrections and Enhancements",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications\n\nIn this section, I wanted to focus on a specific application and discuss the correction technique used with its evolution over the years. Vegetation monitoring is one of the key applications where correction techniques have evolved significantly over the years, driven by advancements in remote sensing and data processing. Vermote et al. (1997) introduced the 6S (Second Simulation of the Satellite Signal in the Solar Spectrum) model, a radiative transfer code that uses inputs like aerosol optical depth, and water vapor to correct Landsat top-of-atmosphere (TOA) radiance to surface reflectance, enabling accurate NDVI for forest monitoring in regions like the Pacific Northwest. The paper confirms its accuracy through comparisons with other codes, achieving relative errors below 5% in reflectance under standard conditions. Hansen et al. (2008) propose an enhanced method integrating MODIS-derived atmospheric data with Landsat imagery, correcting for haze and clouds to monitor forest cover changes in the Congo Basin. More recently, Basener and Basener (2023) proposed a machine learning approach, training Gaussian Process and deep learning models on 100,000 MODTRAN-simulated spectra to correct hyperspectral imagery. By treating atmosphere atmospheric as noise and learning radiative physics directly, their technique offers adaptability to varied conditions, enhancing NDVI precision.\nWhile 6S offers a robust, standardized baseline, Hansen’s MODIS-Landsat synergy improves large-scale forest monitoring but relies on coarse MODIS inputs, and Basener and Basener’s ML approach excels in flexibility yet demands computational resources. This progression—from physics-based simulation to multi-sensor integration and ML adaptability— highlight how the field is constantly evolving.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "W3_Corrections.html#reflections",
+    "href": "W3_Corrections.html#reflections",
+    "title": "3  Corrections and Enhancements",
+    "section": "3.3 Reflections",
+    "text": "3.3 Reflections\n\nReading more on the techniques covered this week made me reflect on how, while the convenience of pre-processed data is undeniable, it’s worth critically questioning whether these standardized corrections and enhancements are universally applicable. For example, atmospheric correction methods designed for one region might not perform as well in another due to differences in environmental conditions. Similarly, relying solely on higher-level products like vegetation indices could overlook nuances in the raw data that might be critical for specific analyses. For instance, Huete et al. (2002) caution that indices like NDVI can be less reliable in arid or semi-arid regions due to soil background effects, emphasizing the need for region-specific adjustments.\nCloud cover is often cited as one of the main challenges in remote sensing studies, but in the region I come from, the Middle East, I don’t think it’s as critical, and I see sandstorms as another key challenge for the region. Sandstorms introduce high levels of particulate matter into the atmosphere, which can distort spectral signals and reduce the accuracy of standard correction methods. This issue is less frequently addressed in mainstream literature. This gap in the literature is something I plan to explore further to better understand how sandstorms impact remote sensing data and how we can develop more robust correction methods for such environments. Moreover, Standardized approaches provide a foundation, but independent thinking and the ability to tailor preprocessing steps to specific project requirements are essential for ensuring the accuracy and reliability of remote sensing analyses.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "W3_Corrections.html#references",
+    "href": "W3_Corrections.html#references",
+    "title": "3  Corrections and Enhancements",
+    "section": "3.4 References",
+    "text": "3.4 References\n\nBasener, B., & Basener, A. (2023). Gaussian Process and Deep Learning Atmospheric Correction. Remote Sensing (Basel, Switzerland), 15(3), 649-. https://doi.org/10.3390/rs15030649\nHansen, M. C., Roy, D. P., Lindquist, E., Adusei, B., Justice, C. O., & Altstatt, A. (2008). A method for integrating MODIS and Landsat data for systematic monitoring of forest cover and change in the Congo Basin. Remote Sensing of Environment, 112(5), 2495–2513. https://doi.org/10.1016/j.rse.2007.11.012\nHuete, A., Didan, K., Miura, T., Rodriguez, E. P., Gao, X., & Ferreira, L. G. (2002). Overview of the radiometric and biophysical performance of the MODIS vegetation indices. Remote Sensing of Environment, 83(1), 195–213. https://doi.org/10.1016/S0034-4257(02)00096-2\nVermote, E. F., Tanre, D., Deuze, J. L., Herman, M., & Morcette, J.-J. (1997). Second Simulation of the Satellite Signal in the Solar Spectrum, 6S: an overview. IEEE Transactions on Geoscience and Remote Sensing, 35(3), 675–686. https://doi.org/10.1109/36.581987",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "W4_Policy.html",
+    "href": "W4_Policy.html",
+    "title": "4  EO Data in Policy Making",
+    "section": "",
+    "text": "4.1 Green Riyadh Initiative\nThis week, we explored how Earth Observation (EO) data can support policymaking. Below is a usecase illustrating how EO data can address a metropolitan policy challenge in Riyadh.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EO Data in Policy Making</span>"
+    ]
+  },
+  {
+    "objectID": "W4_Policy.html#green-riyadh-initiative",
+    "href": "W4_Policy.html#green-riyadh-initiative",
+    "title": "4  EO Data in Policy Making",
+    "section": "",
+    "text": "The Green Riyadh Initiative is a cornerstone of Saudi Arabia’s Vision 2030, aiming to transform Riyadh into a greener, more sustainable city. The project plans to plant 7.5 million trees across the city, increasing green cover from 1.5% to 9.1% by 2030. It seeks to combat urban heat, improve air quality, and enhance biodiversity, creating a healthier, more sustainable city.\nGrowing up in Riyadh, I’ve witnessed firsthand how the city’s extreme heat and urban sprawl have intensified over time. During peak summer, it’s not uncommon to see 45°C or higher, and the urban heat island (UHI) effect makes certain areas feel even hotter. Studies have shown that the UHI effect can increase temperatures by 4-6°C in densely built areas, and at its peak, it may exceed 10°C (Santamouris & Vasilakopoulou, 2023), exacerbating the city’s heat challenges.\nAir quality is another pressing issue, with high levels of particulate matter (PM2.5) and other pollutants, largely due to Riyadh’s car-centric urban design. Urban greenery has been proven to mitigate these challenges by providing shade, reducing car dependency, and absorbing pollutants (Gössling, 2020). By creating shaded walkways and green corridors, the initiative encourages walking and cycling, offering a sustainable alternative to short car trips.\nSince its launch in 2019 by the Royal Commission for Riyadh City (RCRC), the initiative has made significant progress. New parks and green corridors are emerging in neighborhoods, and trees now line almost all major highways. The RCRC has designed a master plan identifying key areas for afforestation, including:\n\n3,330 neighborhood gardens\n2,000 car parking sites\n16,400 Kilometers of streets and roads\n272 Kilometers of valleys\n175,000 Square Kilometers of empty land\n\nRCRC has also established clear guidelines for selecting plant species suitable for Riyadh’s climate and urban environment, prioritizing drought-resistant and native species to ensure sustainability.\nThe initiative aligns with national goals under Vision 2030, including the Saudi Green Initiative, which aims to plant 10 billion trees nationwide, guided by three overarching targets: emissions reduction, afforestation and land regeneration, and land and sea protection. By increasing green spaces, Riyadh contributes directly to these targets, promoting environmental sustainability and improving quality of life. It also connects to global goals, such as the United Nations Sustainable Development Goals (SDGs), particularly SDG 11 (Sustainable Cities and Communities), SDG 13 (Climate Action), and SDG 15 (Life on Land).\n\n\nBelow is a video that gives an overview about the the initiative:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EO Data in Policy Making</span>"
+    ]
+  },
+  {
+    "objectID": "W4_Policy.html#use-of-eo-data",
+    "href": "W4_Policy.html#use-of-eo-data",
+    "title": "4  EO Data in Policy Making",
+    "section": "4.2 Use of EO Data",
+    "text": "4.2 Use of EO Data\n\nIn this section, I’ll focus on how remotely sensed data can support a key objective of the Green Riyadh Initiative: reducing urban heat. While the initiative’s published documents do not explicitly mention the use of EO data, the reported progress suggests that change detection and monitoring are likely being employed. The initiative identifies specific areas and priorities for afforestation, with targeted numbers for different categories such as neighborhood gardens, parking sites, and valleys.\nThermal imagery from satellites like Landsat 8 and Sentinel-3 is one key application to evaluate land surface temperature (LST) reductions after tree planting (Figure 1), as demonstrated in studies like Sadek et al. (2020) and Xu et al. (2023). However, incorporating LiDAR and high-resolution multispectral data (e.g., from Sentinel-2) can take this a step further by enabling precise microclimate mapping. LiDAR’s ability to map canopy height (link) and density at resolutions down to 1 meter, paired with Sentinel-2’s 10-meter multispectral bands could model localized climate conditions at a granular level.  By processing Sentinel-2 data to calculate vegetation indices like the Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI), planners can monitor the health, photosynthesis, and transpiration of Riyadh’s urban greenery. These indices, when overlaid with canopy maps, could generate microclimate maps allowing for targeted afforestation efforts where tree planting can have the most significant cooling impact.\n\n\n\nFigure 1 - Seasonal and spatial variability of LST in Riyadh - Source: Alghamdi et al. 2021\n\n\nTo enrich this microclimate mapping, datasets from the Copernicus Climate Change Service (C3S) offer a broader climatic lens. The C3S ERA5-Land dataset (link), delivering hourly and monthly variables such as 2-meter air temperature, soil moisture, and evapotranspiration at 9-km resolution, can be downscaled and fused with Sentinel-2 NDVI to reveal, for instance, how afforestation along Riyadh’s wadis lowers near-surface air temperature by 1-2°C while boosting humidity in dry seasons, tailoring planting strategies to maximize cooling. Complementing this, the C3S Seasonal Forecast dataset (link) (e.g., ECMWF’s SEAS5 model) provides six-month predictions of temperature and precipitation anomalies, allowing policymakers to optimize planting schedules—perhaps prioritizing early spring in dust-prone areas like Diriyah to enhance tree establishment and microclimatic benefits.\nRelating this to the discussed study during lecture by MacLachlan et al. 2021, which emphasized the importance of strategically placing trees to optimize temperature reduction, microclimate mapping emerges as a vital tool for enhancing the effectiveness of the Green Riyadh Initiative. The initiative’s published documents, while rich with targets, lack the fine-scale spatial detail needed to prioritize plantings where heat mitigation is most urgent. Microclimate mapping, powered by EO data, fills this gap by identifying localized heat sinks offering a pathway to maximize ecological returns on investment. Without such granularity, the initiative risks diluting its cooling potential across less impactful sites, underscoring the transformative role EO-driven mapping could play in sharpening policy focus and execution.\n\n\n\nIllustration of the Green Riyadh Initiative’s greening efforts along a highway at the city’s outer boundary - Source: Green Riyadh, 2023",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EO Data in Policy Making</span>"
+    ]
+  },
+  {
+    "objectID": "W4_Policy.html#reflections",
+    "href": "W4_Policy.html#reflections",
+    "title": "4  EO Data in Policy Making",
+    "section": "4.3 Reflections",
+    "text": "4.3 Reflections\n\nWith the big transformation Riyadh is seeing these years, it was challenging to identify a single policy or a challenge that EO can support, but the Green Riyadh Initiative stands out for its citywide reach. Shaded walkways, new parks, and increased pedestrian activity are visible changes, but whether these efforts meaningfully reduce LST remains unclear without EO data. This highlights a critical gap: without leveraging remote sensing technologies, we cannot fully understand or measure the success of such initiatives. While researching I came across an intriguing finding from an urban scale study on one of Riyadh’s neighborhoods by Haddad et al. (2024). They highlighted how non-irrigated plants help cool cities at night but aren’t very effective during the day, whereas Irrigated trees are the best option for cooling cities both day and night. This aligns with micro-scale studies, such as Zölch et al. (2016), which emphasize the importance of detailed EO data in understanding localized climate impacts and optimizing urban greening strategies.\nOn a broader note, although not related to my use case, one of the key examples that highlight EO data’s power comes from the International Energy Agency (IEA). In 2022, they reported that satellite imagery revealed methane emissions from the energy sector to be 70% higher than official government reports. This underscores EO’s potential to provide accurate, actionable insights that can drive policy decisions. In conclusion, incorporating EO data into more policies isn’t just an enhancement—it’s essential for grounding decisions in evidence, ensuring initiatives like Green Riyadh deliver measurable benefits, and tackling global challenges with precision and accountability.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EO Data in Policy Making</span>"
+    ]
+  },
+  {
+    "objectID": "W4_Policy.html#references",
+    "href": "W4_Policy.html#references",
+    "title": "4  EO Data in Policy Making",
+    "section": "4.4 References",
+    "text": "4.4 References\n\nAlghamdi, A. S., Alzhrani, A. I., & Alanazi, H. H. (2021). Local Climate Zones and Thermal Characteristics in Riyadh City, Saudi Arabia. Remote Sensing, 13(22), 4526. https://doi.org/10.3390/rs13224526\nGössling, S. (2020). Why cities need to take road space from cars - and how this could be done. Journal of Urban Design, 25(4), 443–448. https://doi.org/10.1080/13574809.2020.1727318\nHaddad, S., Zhang, W., Paolini, R., Gao, K., Altheeb, M., Al Mogirah, A., Bin Moammar, A., Hong, T., Khan, A., Cartalis, C., Polydoros, A., & Santamouris, M. (2024). Quantifying the energy impact of heat mitigation technologies at the urban scale. Nature Cities, 1(1), 62–72. https://doi.org/10.1038/s44284-023-00005-5\nInternational Energy Agency. (2022, February 23). Methane emissions from the energy sector are 70% higher than official figures. https://www.iea.org/news/methane-emissions-from-the-energy-sector-are-70-higher-than-official-figures\nMacLachlan, A., Biggs, E., Roberts, G., & Boruff, B. (2021). Sustainable City Planning: A Data-Driven Approach for Mitigating Urban Heat.\nSadek, M., Beshr, A. A., Kaloop, M. R., Liu, G., Co, Y., Mustafa, E. K., Zarzoura, F., & Zhao, D. (2020). Study for Predicting Land Surface Temperature (LST) Using Landsat Data: A Comparison of Four Algorithms. Advances in Civil Engineering, 2020(2020), 1–16. https://doi.org/10.1155/2020/7363546\nSantamouris, M., & Vasilakopoulou, K. (2023). Recent progress on urban heat mitigation technologies. Science Talks (Online), 5, 100105-. https://doi.org/10.1016/j.sctalk.2022.100105\nXu, X., Pei, H., Wang, C., Xu, Q., Xie, H., Jin, Y., Feng, Y., Tong, X., & Xiao, C. (2023). Long-term analysis of the urban heat island effect using multisource Landsat images considering inter-class differences in land surface temperature products. The Science of the Total Environment, 858, 159777-. https://doi.org/10.1016/j.scitotenv.2022.159777\nZölch, T., Maderspacher, J., Wamsler, C., & Pauleit, S. (2016). Using green infrastructure for urban climate-proofing: An evaluation of heat mitigation measures at the micro-scale. Urban Forestry & Urban Greening, 20, 305–316. https://doi.org/10.1016/j.ufug.2016.09.011",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EO Data in Policy Making</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html",
+    "href": "W6_GEE.html",
+    "title": "5  Google Earth Engine (GEE)",
+    "section": "",
+    "text": "5.1 Introduction to GEE",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#introduction-to-gee",
+    "href": "W6_GEE.html#introduction-to-gee",
+    "title": "5  Google Earth Engine (GEE)",
+    "section": "",
+    "text": "This week we were introduced to Google Earth Engine (GEE), the one-hour lecture was heavy, full of new terminologies and concept. The session covered: code syntax, objects, and functions; the differences between client-side and server-side processes; and key technical ideas like scaling, projections, and reductions. We also explored common analytical techniques, including zonal statistics, regression, and principal component analysis. \nHere, the focus will be on two key components that i think are essential building blocks for anyone beginning to work with Google Earth Engine (GEE): scaling and reduction\nIn GEE, the concept of scale refers to the resolution of the data—how large or small each pixel is, such as 10 meters, 30 meters, or 500 meters. Unlike traditional GIS tools, where the resolution is determined by the input data, GEE takes a distinctive approach by tying scale to the output. This process occurs seamlessly on the server side, enabling users to handle datasets with varying native resolutions without manual resizing, reprojection, or alignment. If the scale isn’t explicitly set, GEE assigns one based on the context—typically the native resolution of the input data or the zoom level of the map in view. This flexibility stands out as one of GEE’s greatest strengths, removing the time-consuming preprocessing steps common in traditional workflows. Yet, this convenience brings a layer of responsibility: users must thoughtfully choose a scale that fits their analysis needs. A scale too coarse risks hiding critical patterns or details, while one too fine can make the analysis overly complex or computationally intensive.\nReduction is another fundamental concept that plays a crucial role in analyzing and summarizing geospatial data. It refers to aggregating pixel values into concise statistics, such as means, sums, or extremes, enabling analysis across spatial or temporal dimensions. For example, reducing a time series of satellite images to a single composite can reveal trends in vegetation health (e.g., NDVI) or land surface temperature over time (Zhang et al., 2003). Reduction techniques in GEE can be broadly categorized into:\n\nTemporal Reduction (imageCollection.reduce()): Aggregating data over time, such as calculating seasonal or annual averages. This is particularly useful for monitoring long-term environmental changes .\nSpatial Reduction:\n• reduceRegion(), reduceRegions() - (Figure 1): Summarizing data over a geographic area to compute statistics for polygons or points.\n• reduceNeighborhood() - (Figure 2): Aggregating data within a kernel or moving window, which is useful for smoothing data or detecting spatial patterns (e.g., edge detection or texture analysis).\nSpectral Reduction (image.reduce()): Combining or summarizing data across multiple bands, such as computing vegetation indices or band-specific statistics.\n\n\n\n\n\nFigure 1 - Illustration of a Reducer applied to an ImageCollection.  Source\n\n\n\n\n\nFigure 2 - Illustration of reduceNeighborhood(), where the reducer is applied in a kernel  Source\n\n\n\nScale and reduction are foundational to geospatial analysis in GEE: scale defines the resolution, shaping the framework for analysis, while reduction extracts meaningful insights from data. Mastering these concepts goes beyond technical skill—it’s about balancing detail and simplicity to address real-world questions effectively. I came across a very interesting metaphor in a post (unfortunately, I’ve lost the link, but it’s too good to skip): it’s almost like cooking— scale preps the ingredients, chopping them just right, and reduction simmers them into a perfect sauce. Get one wrong, and the whole dish is off. In GEE, this balance feels like an art form, one that takes practice to master but opens up a world of possibilities once you do. So it’s not just about the tools; it’s about understanding the process, experimenting, and refining your approach.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#applications",
+    "href": "W6_GEE.html#applications",
+    "title": "5  Google Earth Engine (GEE)",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\n\nGEE has emerged as a critical tool for accessing and analyzing geospatial data across various disciplines. Pham-Duc et al. (2023) reviewed trends in GEE usage by analyzing peer-reviewed articles up to 2023, revealing that nearly 50% of applications are concentrated in the fields of Earth and planetary sciences and environmental science (Figure 3). This dominance aligns with these fields’ reliance on processes that are inherently spatial, temporal, and data-intensive. GEE, with its extensive satellite imagery archive, cloud-based processing power, and real-time capabilities, is ideally suited for studying phenomena such as deforestation, climate change, and ecosystem dynamics.\n\n\n\nFigure 3 - Disciplines where GEE has been applied\n\n\nGlobal Forest Cover Change by Hansen et al. (2013) stands out as one of the pioneering applications in quantifying global forest extent and change in a high-resolution (30-meter) thematic map. This work has become a cornerstone for researchers studying deforestation and forest dynamics at a global scale (Heino et al., 2015; Tyukavina et al., 2017). In addition, GEE has played a critical role in real-time disaster monitoring, such as during the recent California wildfires, where it enabled rapid mapping of fire perimeters, burn severity, and smoke dispersion using satellite data (Anderson, 2025)\nGEE’s potential extends beyond environmental and disaster applications. By providing access to high-performance computing and vast datasets, it empowers researchers and policymakers to address global challenges with remarkable precision and the ability to scale up solutions.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#reflections",
+    "href": "W6_GEE.html#reflections",
+    "title": "5  Google Earth Engine (GEE)",
+    "section": "5.3 Reflections",
+    "text": "5.3 Reflections\n\nThis week, one main thought that continually came to my mind while learning more about GEE is why it hasn’t been more widely adopted by governments and large companies, especially given its real-time capabilities and open-access model. While GEE is still popular among researchers and environmental scientists for its ability to process vast amounts of satellite data quickly, its reliance on coding (JavaScript or Python) can be a significant barrier for non-technical users. In contrast, Esri’s ArcGIS dominates in global policy and spatially based applications, offering a comprehensive, enterprise-grade GIS suite with user-friendly interfaces like ArcGIS Pro and ArcGIS Online. These features make Esri more accessible for policymakers and organizations that may lack technical expertise but require robust tools for decision-making. However, Esri’s dominance raises concerns about accessibility for underfunded regions and institutions that cannot afford proprietary software licenses. GEE’s open-access model has the potential to democratize geospatial analysis, particularly in developing countries or smaller organizations, but its steep learning curve and lack of intuitive graphical interfaces limit its broader adoption. Additionally, GEE’s cloud-based nature, while powerful, can be a limitation for users handling sensitive data that requires offline processing. That said, despite GEE’s established collaborations with the United Nations and NGOs—such as UNEP and FAO for environmental monitoring and disaster response—I think its niche as a coding-heavy, research-focused tool limits its appeal for widespread governmental and corporate use compared to Esri’s enterprise-ready solutions. GEE could expand its influence by enhancing user-friendly interfaces, integrating AI automation, and forming deeper enterprise partnerships, potentially complementing Esri’s strengths to create a more inclusive geospatial ecosystem for global policy and decision-making.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#references",
+    "href": "W6_GEE.html#references",
+    "title": "5  Google Earth Engine (GEE)",
+    "section": "5.4 References",
+    "text": "5.4 References\n\nGoogle Earth Engine Team. (n.d.). Introduction to reducers. Google Developers. https://developers.google.com/earth-engine/guides/reducers_intro\nHansen, M., Potapov, P., Moore, R., Hancher, M. (2013). The first detailed maps of global forest change. Google Research Blog. Retrieved from https://research.google/blog/the-first-detailed-maps-of-global-forest-change/\nHeino, M., Kummu, M., Makkonen, M., Mulligan, M., Verburg, P. H., Jalava, M., & Räsänen, T. A. (2015). Forest loss in protected areas and intact forest landscapes: A global analysis. PLOS ONE, 10(10), e0138918. https://doi.org/10.1371/journal.pone.0138918\nJohn Anderson (2025). Supporting the Los Angeles Community During the Wildfires. Google Earth. Retrieved from https://medium.com/google-earth/supporting-the-los-angeles-community-during-the-wildfires-f67614046794\nPham-Duc, B., Nguyen, H., Phan, H., & Tran-Anh, Q. (2023). Trends and applications of Google Earth Engine in remote sensing and earth science research; a bibliometric analysis using SCOPUS database. Earth Science Informatics, 16(3), 2355–2371. https://doi.org/10.1007/s12145-023-01035-2\nTyukavina, A., Hansen, M. C., Potapov, P. V., Stehman, S. V., Smith-Rodriguez, K., Okpa, C., & Aguilar, R. (2017). Types and rates of forest disturbance in Brazilian Legal Amazon, 2000–2013. Science Advances, 3(4), e1601047–e1601047. https://doi.org/10.1126/sciadv.1601047\nZhang, X., Friedl, M. A., Schaaf, C. B., Strahler, A. H., Hodges, J. C. F., Gao, F., Reed, B. C., & Huete, A. (2003). Monitoring vegetation phenology using MODIS. Remote Sensing of Environment, 84(3), 471–475. https://doi.org/10.1016/S0034-4257(02)00135-9",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA00023 Learning Diary",
+    "section": "",
+    "text": "Overview\nWelcome to my learning diary, where I will reflect on my weekly engagement with course content, readings, and practical materials using Quarto in R. Each book will highlight key insights and applications of the concepts discussed, capturing what I have learned and found interesting each week. The structure of my diary includes a summary of the weekly material, an exploration of how these concepts have been applied in literature or policy, and personal reflections that contextualize the skills and knowledge gained, considering their relevance and potential future applications based on my interests.\n\ndon’t forget to add a header\nUpdate Xaringan slides link # About me\n\nHello, this is Norah",
+    "crumbs": [
+      "Overview"
+    ]
   }
 ]
