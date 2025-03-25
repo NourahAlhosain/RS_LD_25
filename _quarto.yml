@@ -14,6 +14,7 @@ book:
     - W4_Policy.qmd
     - W6_GEE.qmd
     - W7_classificarion_1.qmd
+    - W8_classification_2.qmd
     - references.qmd
   search: true
   #repo-url: 

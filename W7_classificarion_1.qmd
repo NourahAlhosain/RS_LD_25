@@ -71,5 +71,4 @@ Myint, S. W., Gober, P., Brazel, A., Grossman-Clarke, S., & Weng, Q. (2011). Per
 Richards, J. A. (John A., & Jia, X. (2006). Remote sensing digital image analysis : an introduction. (4th ed. / John A. Richards, Xiuping Jia). Springer.
 
 Zhang, C., Sargent, I., Pan, X., Li, H., Gardiner, A., Hare, J., & Atkinson, P. M. (2019). Joint Deep Learning for land cover and land use classification. Remote Sensing of Environment, 221, 173–187. https://doi.org/10.1016/j.rse.2018.11.014
-
 :::
