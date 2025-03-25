@@ -13,6 +13,7 @@ book:
     - W3_Corrections.qmd
     - W4_Policy.qmd
     - W6_GEE.qmd
+    - W7_classificarion_1.qmd
     - references.qmd
   search: true
   #repo-url: 
