@@ -1,74 +1,65 @@
 ---
 title: "Classification I"
-format: html
 ---
 
 ## Summary
 
 ::: {style="text-align: justify;"}
-This week, we explored a foundational concept in remote sensing: classification, the process of categorizing image pixels into distinct classes based on their spectral characteristics. The first part of the lecture covered real-world applications like tracking urban sprawl, linking air pollution to land use, and pinpointing deforestation hotspots. The forest monitoring and illegal logging case was really interesting. In the case, Landsat imagery was pre-processed—resampled, converted into top-of-atmosphere reflectance, and cleared of cloud cover—before introducing a key concept: "creating metrics". This essential step, performed before classification, involves deriving specific numerical measures or indices (e.g., maximum/minimum reflectance, mean values, or temporal slopes) from spectral bands across a time series. These metrics transform raw data into a "feature space," allowing algorithms to identify patterns, such as the detection of 5,000 deforestation sites in Brazil (Hansen et al., 2013).
+This week, we explored a foundational concept in remote sensing: classification, the process of categorizing image pixels into distinct classes based on their spectral characteristics. The first part of the lecture covered real-world applications like tracking urban sprawl, linking air pollution to land use, and pinpointing deforestation hotspots. The forest monitoring and illegal logging case was really interesting. In that case, Landsat imagery was pre-processed—resampled, converted into top-of-atmosphere reflectance, and cleared of cloud cover—before introducing a key concept: "creating metrics". This essential step, performed before classification, involves deriving specific numerical measures or indices (e.g., maximum/minimum reflectance, mean values, or temporal slopes) from spectral bands across a time series. These metrics transform raw data into a "feature space," allowing algorithms to identify patterns, such as the detection of 5,000 deforestation sites in Brazil (Hansen et al., 2013).
 
-The second part shifted focus to how classification is done, covering general machine learning algorithms (e.g., linear regression, Random Forests) and how they are applied in a spatial context. **Linear regression** is primarily utilized to estimate continuous measures, such as the distribution of atmospheric pollutants across geographic expanses, providing a foundational approach to predicting trends over space and time. **Random Forests**, conversely, assemble multiple decision trees that analyze random data samples to classify land types—forests, urban areas, or fields—enhancing accuracy through collective evaluation. This method leverages bootstrapping and random variable selection to enhance reliability, as demonstrated in its application to land cover mapping.
+The second part shifted focus to how classification is done, covering general machine learning algorithms (e.g., linear regression, random forest) and how they are applied in a spatial context. **Linear regression** is primarily utilized to estimate continuous measures, such as the distribution of atmospheric pollutants across geographic expanses, providing a foundational approach to predicting trends over space and time. **Random Forests**, conversely, assemble multiple decision trees that analyze random data samples to classify land types—forests, urban areas, or fields—enhancing accuracy through collective evaluation. This method leverages bootstrapping and random variable selection to enhance reliability, as demonstrated in its application to land cover mapping.
 
-The lecture referenced Maximum Likelihood, an older probability-based method, but we did not cover it, as it is used anymore. Looking at why, I learned how its reliance on assumptions of uniform data distribution is considered less effective for handling the diverse and complex imagery prevalent today, particularly given advancements in computational technology (Richards, 2006).
+The lecture referenced Maximum Likelihood, an older probability-based method, but we did not cover it, as it is not used anymore. Looking at why, I learned how its reliance on assumptions of uniform data distribution is considered less effective for handling the diverse and complex imagery prevalent today, particularly given advancements in computational technology (Richards, 2006).
 
-Despite these advances, challenges and limitations persist. **Decision trees risk overfitting**, where models excessively conform to training data, reducing their ability to generalize. Mitigation through pruning or setting minimum leaf sizes addresses this, though it increases complexity and requires precise tuning. Additionally, the lecture highlights a **trade-off between complexity and interpretability**: advanced classifiers like Random Forests and Support Vector Machines offer high accuracy but can become "black boxes," reducing interpretability.
+Despite these advances, challenges and limitations persist. **Decision trees risk overfitting**, where models excessively conform to training data, reducing their ability to generalize. Mitigation through pruning or setting minimum leaf sizes addresses this, though it increases complexity and requires precise tuning. Additionally, the lecture highlights a **trade-off between complexity and interpretability**: advanced classifiers like Random Forests and Support Vector Machines offer high accuracy but can might become "black boxes," reducing interpretability.
 :::
 
 ## Applications
 
 ::::: {style="text-align: justify;"}
-While the summary focused on algorithmic approaches (e.g., Random Forests, SVM), another critical distinction we also covered in classification is **pixel-based** versus **object-based** methods. These approaches represent fundamentally different ways of interpreting remote sensing data, each with distinct advantages depending on the application.
 
-**1. Pixel-Based Classification: Limitations in Urban Landscapes**
+While the summary emphasized algorithmic approaches (e.g., Random Forests (RF), Support Vector Machines (SVM)), another critical distinction in classification methods we covered this week lies in **supervised** and **unsupervised** techniques, each offering unique applications. Unsupervised approaches, like k-means clustering, identify natural groupings without prior labels, offering flexibility for exploratory tasks where the goal is discovery rather than prediction. On the other hand, Supervised classification, where algorithms like Random Forests or SVM are trained on labeled datasets, excels in precise, goal-driven tasks. Both algorithms, are supervised learning methods, but they differ significantly in their approach, data handling, and performance characteristics. Here I’ll focus on highlighting that:
 
-Pixel-based methods classify individual pixels based solely on their spectral signatures. While effective for large-scale studies like the global deforestation mapping by Hansen et al. (2013), which was discussed in the lecture, they face challenges in urban environments, including:
+**- SVM: **
 
-::: {style="padding-left: 10%;"}
--   Spectral ambiguity between different urban materials
+Similar to logistic regression, SVM minimizes generalization error without distribution assumptions, **separating classes** (e.g., forest vs. farmland) through an optimal hyperplane. It excels in high-dimensional applications, one example is detecting oil spills in synthetic aperture radar (SAR) imagery for environmental monitoring. Matkan et al. (2013) applied SVM to SAR images from the Gulf of Mexico, achieving high accuracy by training on texture and intensity features to differentiate oil-contaminated water from clean surfaces. Optimal performance required tuning parameters C (regularization) and gamma (kernel scale) through grid search and cross-validation, ensuring a balance between margin maximization and classification precision. **However**, this tuning process is computationally demanding, particularly for large datasets, and SVM’s limited interpretability—offering no direct insight into feature contributions—may restrict its use in applications requiring transparent decision-making, such as policy reporting for spill response strategies.
 
--   Prevalence of mixed pixels in high-resolution imagery
 
--   Inability to incorporate spatial relationships between features
-:::
+**- RF: **
 
-**2. Object-Based Classification: A Spatial-Spectral Solution**
+This methods ability to **quantify feature importance** makes it valuable for various applications. One example is its role in analyzing burn severity drivers, as demonstrated by Huang et al. (2020) in California’s coastal mountains. Their study used RF to model burn severity, identifying slope, aspect, fuel moisture, and long-term climate as key predictors. During droughts, RF revealed that low fuel moisture and high climatic water deficit doubled high-severity burn areas. **However**, while efficient and interpretable, this approach may **oversimplify** localized fire behavior, particularly in heterogeneous landscapes where small differences in terrain or fuel types affect fire intensity. Additionally, correlated features (e.g., temperature and drought indices) can distort importance rankings, requiring careful variable selection.
 
-**Object-based image analysis** (OBIA) addresses these limitations through a hierarchical approach that:
 
-::: {style="padding-left: 10%;"}
-1.  Segments imagery into meaningful objects based on both spectral and spatial characteristics
+<figure style=" text-align: center;">
 
-2.  Incorporates contextual information through shape, texture, and relational metrics
+<img src="images/supervised_learning.png" style="width: 70%;"/>
 
-3.  Utilizes multi-scale analysis to capture features at appropriate levels of detail
-:::
+<figcaption style="text-align: center;">
 
-The efficacy of this approach was demonstrated by Myint et al. (2011), whose comparative analysis of land cover in Phoenix showed a significant accuracy improvement—90.4% for object-based classification versus 67.6% for pixel-based classification, as visually evidenced in Figure 1 below. This finding underscores the effectiveness of incorporating spatial context in classification efforts.
+Figure 1 - RF Vs SVM approach. <br> <a href="https://cambridgecoding.wordpress.com/2016/05/16/expanding-your-machine-learning-toolkit-randomized-search-computational-budgets-and-new-algorithms-2/">Source</a>
 
-![Figure 1 - (a) Test image; (b) output map produced by the object-based approach; (c) output map produced by the classical per-pixel classifier. Note: Cyan = buildings; orange = unmanaged soil; light green = grass; gray = other impervious surfaces, purple = swimming pools; dark green = trees and shrubs; and blue = lakes and ponds. - Source: (Myint et al., 2011)](images/OBIA_W6.png){fig-align="center"}
+</figcaption>
+
+</figure>
 :::::
 
 ## Reflections
 
 Reflecting on this lecture, I found it easy to follow and connect with, probably because classification appears in many familiar research areas like city planning or detecting change. Before this, I had some knowledge of machine learning, but not within remote sensing.
 
-A few years ago, in 2020, I attempted to detect building footprints in Riyadh using an Esri machine learning tool. The results were inaccurate, and at the time, I assumed buildings shared similar traits like materials across regions. I didn’t fully understand how Riyadh’s buildings differ in spectral and structural characteristics from those in the tool’s training data and the big impact this has. Now, I see how methods like Support Vector Machines or object-based classification, introduced in the lecture, could improve such work by adjusting to local details.
+A few years ago, in 2020, I attempted to detect building footprints in Riyadh using an Esri machine learning tool. The results were inaccurate, and at the time, I assumed buildings shared similar traits like materials across regions. I didn’t fully understand how Riyadh’s buildings differ in spectral and structural characteristics from those in the tool’s training data and the big impact this has. Now, I see how methods like SVM classification, introduced in the lecture, could improve such work by adjusting to local details.
 
 The lecture also raised a broader consideration: the tendency to utilize the most accurate tools without considering their suitability for a given problem. The lecture showed Maximum Likelihood isn’t used much anymore because it can’t keep up with today’s messy data (Richards, 2006), which makes me think: how often do we pick flashy tech over what actually works for the problem?
 
-The discussion of pixel-based versus object-based approaches stood out to me as well, especially as I’m planning to employ detection methodologies for my dissertation. I now understand how this fundamental choice shapes the patterns we can identify, so I’ll definitely dig deeper into this topic.
 
 ## References
 
 ::: {style="text-align: left; font-size: 13px;"}
 Hansen, M.C., Potapov, P.V., Moore, R., Hancher, M., Turubanova, S.A., Tyukavina, A., Thau, D., Stehman, S.V., Goetz, S.J., Loveland, T.R., Kommareddy, A., Egorov, A., Chini, L., Justice, C.O., Townshend, J.R.G., 2013. High-Resolution Global Maps of 21st-Century Forest Cover Change. Science 342, 850–853.
 
-Ma, L., Li, M., Ma, X., Cheng, L., Du, P., & Liu, Y. (2017). A review of supervised object-based land-cover image classification. ISPRS Journal of Photogrammetry and Remote Sensing, 130, 277–293. https://doi.org/10.1016/j.isprsjprs.2017.06.001
+Huang, Y., Jin, Y., Schwartz, M. W., & Thorne, J. H. (2020). Intensified burn severity in California’s northern coastal mountains by drier climatic condition. Environmental Research Letters, 15(10), 104033-. https://doi.org/10.1088/1748-9326/aba6af
 
-Myint, S. W., Gober, P., Brazel, A., Grossman-Clarke, S., & Weng, Q. (2011). Per-pixel vs. object-based classification of urban land cover extraction using high spatial resolution imagery. Remote Sensing of Environment, 115(5), 1145–1161. https://doi.org/10.1016/j.rse.2010.12.017
+Matkan, A. A., Hajeb, M., & Azarakhsh, Z. (2013). Oil spill detection from SAR image using SVM based classification. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences., XL-1/W3, 55–60. https://doi.org/10.5194/isprsarchives-XL-1-W3-55-2013
 
 Richards, J. A. (John A., & Jia, X. (2006). Remote sensing digital image analysis : an introduction. (4th ed. / John A. Richards, Xiuping Jia). Springer.
-
-Zhang, C., Sargent, I., Pan, X., Li, H., Gardiner, A., Hare, J., & Atkinson, P. M. (2019). Joint Deep Learning for land cover and land use classification. Remote Sensing of Environment, 221, 173–187. https://doi.org/10.1016/j.rse.2018.11.014
 :::
