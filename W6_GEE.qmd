@@ -1,6 +1,5 @@
 ---
 title: "Google Earth Engine (GEE)"
-format: html
 ---
 
 ## Introduction to GEE
@@ -31,7 +30,7 @@ In GEE, the concept of **scale** refers to the resolution of the data—how larg
 
 <figcaption style="text-align: center;">
 
-Figure 1 - Illustration of a Reducer applied to an ImageCollection. <br> <a href="https://developers.google.com/earth-engine/guides/reducers_image_collection">Source</a>
+Figure 1 - Illustration of a Reducer applied to an ImageCollection. <br> <a href="https://developers.google.com/earth-engine/guides/reducers_image_collection" target="_blank">Source</a>
 
 </figcaption>
 
@@ -43,7 +42,7 @@ Figure 1 - Illustration of a Reducer applied to an ImageCollection. <br> <a href
 
 <figcaption style="text-align: center;">
 
-Figure 2 - Illustration of reduceNeighborhood(), where the reducer is applied in a kernel <br> <a href="https://developers.google.com/earth-engine/guides/reducers_reduce_neighborhood">Source</a>
+Figure 2 - Illustration of reduceNeighborhood(), where the reducer is applied in a kernel <br> <a href="https://developers.google.com/earth-engine/guides/reducers_reduce_neighborhood" target="_blank">Source</a>
 
 </figcaption>
 

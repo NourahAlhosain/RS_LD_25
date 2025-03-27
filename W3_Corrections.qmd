@@ -9,7 +9,7 @@ This week, the lecture covered the essentials of preparing and enhancing satelli
 
 With that being said, it’s important to mention that remote sensing products now often come pre-corrected and enhanced. Yet, understanding these processes remains crucial, as it empowers users to evaluate data quality, address specific project needs, and adjust workflows across diverse satellite sources. As I was trying to understand Analysis Ready Data (ARD), this article helped me understand ARD’s core processing concepts. In addition, this week’s practical highlighted how each satellite offers unique products, and how collections—systematically organized groups of satellite imagery—are categorized into different processing levels, which indicate the degree of preprocessing applied to the data. For instance, Level 1 data includes raw or minimally processed imagery, while higher levels, like Level 3, provide specialized outputs such as vegetation indices or land cover classifications, ready for direct use in applications (Figure 1). ARD brings clear benefits, including time savings, consistency, and accessibility that lowers technical barriers for users. However, its standardized processing may not account for regional variations, such as unique atmospheric conditions or terrain complexities, potentially reducing accuracy in specific contexts. Also, reliance on ARD can lead to a lack of transparency in the preprocessing steps, making it difficult for users to assess or modify the corrections applied. Thus, while ARD streamlines workflows, it is not a one-size-fits-all solution and recognizing its limitations is key to leveraging it effectively.
 
-![Figure 1 - From left to right: (1) Sentinel-2 Level-1C TOA reflectance input image, (2) the atmospherically corrected Level-2A surface reflectance image, (3) the output scene classification of the Level-1C product - Source: European Space Agency, [link](https://sentinels.copernicus.eu/sentinel-data-access/sentinel-products/sentinel-2-data-products/collection-0-level-2a)](images/tm-Sentinel-2-L2-products.png){fig-align="center"}
+![Figure 1 - From left to right: (1) Sentinel-2 Level-1C TOA reflectance input image, (2) the atmospherically corrected Level-2A surface reflectance image, (3) the output scene classification of the Level-1C product - Source: European Space Agency, [link](https://sentinels.copernicus.eu/sentinel-data-access/sentinel-products/sentinel-2-data-products/collection-0-level-2a){target="_blank"}](images/tm-Sentinel-2-L2-products.png){fig-align="center"}
 :::
 
 ### Dictionary for some new terminologies I learned this week
@@ -46,7 +46,7 @@ td {
 
 ::: table-container
 | Terminology | Meaning |
-|----|----|
+|------------------------------------|------------------------------------|
 | Analysis Ready Data | Pre-processed and formatted data that is immediately usable for analysis. |
 | Atmospheric attenuation | The reduction of signal strength as electromagnetic waves pass through the atmosphere. |
 | Feathering | A technique used to blend the edges of images or data from different sources to create a seamless appearance. |

@@ -1,0 +1,33 @@
+---
+title: "SAR"
+---
+
+## Summary
+
+::: {style="text-align: justify;"}
+In the introduction page of this diary, I briefly discussed the distinction between active and passive sensors. However, much of this module has focused on passive optical sensors. This week, we concluded the module by shifting our attention to Synthetic Aperture Radar (SAR) - an active technology with unique advantages: day/night operation (independent of solar illumination), all-weather capability, subsurface penetration potential, and flexible imaging configurations ranging from wide-area coverage to high-resolution mapping.
+:::
+
+::: {style="text-align: justify;"}
+### How does SAR Work?
+
+SAR emits radiofrequency pulses toward Earth’s surface from a moving platform, like a satellite. These radar waves bounce back after interacting with features below, carrying information about their size, orientation, composition, and texture. In radar systems, resolution improves with a larger antenna aperture, much like how a bigger aperture in optical cameras boosts light collection for sharper images. Yet, for a satellite to achieve high-resolution Earth imaging, a physical antenna would need to be impractically massive—spanning hundreds of meters. SAR overcomes this limitation by "synthesizing" a large aperture using motion. As the satellite travels along its orbit, it transmits multiple radar pulses and records their reflections (Figure 1) . By combining these signals over time, SAR simulates the effect of a massive antenna, achieving high resolution without the need for an impractical physical structure. While groundbreaking, this approach has inherent limitations. The technique's dependence on precise motion makes it sensitive to platform stability - even minor deviations in the satellite's trajectory can compromise the synthesized aperture, potentially degrading image quality. Additionally, the complex signal processing demands substantial computational resources and introduces geometric distortions that require correction.
+
+![Figure 1 - Depiction of synthetically increasing aperture for a given sensor and using concepts from camera optics to analogize the processes. - Source: [Esri](https://www.esri.com/arcgis-blog/products/arcgis-pro/imagery/introduction-to-synthetic-aperture-radar/){target="_blank"}](images/Spatial-resolution-GIF_W9.gif){fig-align="center"}
+
+
+:::
+
+::: {style="text-align: justify;"}
+The reflections SAR captures, known as “backscatter,” vary by scattering mechanism, revealing insights into the surface type of an object (Figure 2). However, surface properties are complicated, Campbell (2002) highlights how these complexities create an "inverse problem" where multiple surface conditions may generate identical backscatter responses.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+#| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'
+#| warning: false
+source("carousel.R")
+carousel("gallery-carousel", 5000, 
+         yaml.load_file("carousel.yml"))
+```
+:::
+
+Figure 2 - SAR Backscatter Mechanisms - Source: \[[`EUSI`](https://www.euspaceimaging.com/blog/2024/04/05/what-is-sar-imagery/)\]

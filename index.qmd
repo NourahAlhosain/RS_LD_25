@@ -3,8 +3,17 @@
 Welcome to my learning diary, where I will reflect on my weekly engagement with course content, readings, and practical materials using [Quarto](https://quarto.org/docs/books) in R. Each book will highlight key insights and applications of the concepts discussed, capturing what I have learned and found interesting each week. The structure of my diary includes a **summary** of the weekly material, an exploration of how these concepts have been **applied** in literature or policy, and personal **reflections** that contextualize the skills and knowledge gained, considering their relevance and potential future applications based on my interests.
 
 -   don't forget to add a header
+
 -   Update Xaringan slides link \# About me
+
 -   Update reflection on Xaringan
+
 -   make sure to critical engage with each section, shall i highlight?
+
+-   
+
+    ```         
+    {target="_blank"}
+    ```
 
 Hello, this is Norah

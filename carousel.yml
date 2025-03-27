@@ -1,0 +1,15 @@
+
+- caption: "Backscatter from a rough surface (single bounce)"
+  image: "images/backscatter_rough_surf_W9.png"
+
+- caption: "Backscatter from a smooth surface (single bounce)"
+  image: "images/backscatter_smooth_surface_W9.png"
+
+- caption: "Backscatter from elevated buildings (double bounce)"
+  image: "images/backscatter_db_W9.png"
+
+- caption: "Multiple diffuse backscattering from objects with several surface layers "
+  image: "images/backscatter_veg_W9.png"
+
+
+  

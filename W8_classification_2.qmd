@@ -105,4 +105,21 @@ This limitation highlights a broader conceptual shift in geospatial analysis—f
 
 These observations resonate particularly with my planned dissertation work on detection methodologies. The choice between pixel-based and object-based approaches—a fundamental analytical decision—directly influences detectable patterns and outcomes. This realization underscores the need for deeper investigation into how methodological selections shape research findings across different applications
 
+## References
 
+::: {style="text-align: left; font-size: 13px;"}
+Banko, Gebhard. (1998). A Review of Assessing the Accuracy of Classifications of Remotely Sensed Data and of Methods Including Remote Sensing Data in Forest Inventory.
+
+Brenning, A. (2012). Spatial cross-validation and bootstrap for the assessment of prediction rules in remote sensing: The R package sperrorest. 2012 IEEE International Geoscience and Remote Sensing Symposium, 5372–5375. https://doi.org/10.1109/IGARSS.2012.6352393
+
+Ma, L., Li, M., Ma, X., Cheng, L., Du, P., & Liu, Y. (2017). A review of supervised object-based land-cover image classification. ISPRS Journal of Photogrammetry and Remote Sensing, 130, 277–293. https://doi.org/10.1016/j.isprsjprs.2017.06.001
+
+Myint, S. W., Gober, P., Brazel, A., Grossman-Clarke, S., & Weng, Q. (2011). Per-pixel vs. object-based classification of urban land cover extraction using high spatial resolution imagery. Remote Sensing of Environment, 115(5), 1145–1161. https://doi.org/10.1016/j.rse.2010.12.017
+
+Roberts, D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera‐Arroita, G., Hauenstein, S., Lahoz‐Monfort, J. J., Schröder, B., Thuiller, W., Warton, D. I., Wintle, B. A., Hartig, F., & Dormann, C. F. (2017). Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography (Copenhagen), 40(8), 913–929. https://doi.org/10.1111/ecog.02881
+
+Tobler, W. R. (1970). A Computer Movie Simulating Urban Growth in the Detroit Region. Economic Geography, 46, 234–240. https://doi.org/10.2307/143141
+
+Zhang, C., Sargent, I., Pan, X., Li, H., Gardiner, A., Hare, J., & Atkinson, P. M. (2019). Joint Deep Learning for land cover and land use classification. Remote Sensing of Environment, 221, 173–187. https://doi.org/10.1016/j.rse.2018.11.014
+
+:::
