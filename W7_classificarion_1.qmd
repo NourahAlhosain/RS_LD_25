@@ -11,24 +11,21 @@ The second part shifted focus to how classification is done, covering general ma
 
 The lecture referenced Maximum Likelihood, an older probability-based method, but we did not cover it, as it is not used anymore. Looking at why, I learned how its reliance on assumptions of uniform data distribution is considered less effective for handling the diverse and complex imagery prevalent today, particularly given advancements in computational technology (Richards, 2006).
 
-Despite these advances, challenges and limitations persist. **Decision trees risk overfitting**, where models excessively conform to training data, reducing their ability to generalize. Mitigation through pruning or setting minimum leaf sizes addresses this, though it increases complexity and requires precise tuning. Additionally, the lecture highlights a **trade-off between complexity and interpretability**: advanced classifiers like Random Forests and Support Vector Machines offer high accuracy but can might become "black boxes," reducing interpretability.
+Despite these advances, challenges and limitations persist. **Decision trees risk overfitting**, where models excessively conform to training data, reducing their ability to generalize. Mitigation through pruning or setting minimum leaf sizes addresses this, though it increases complexity and requires precise tuning. Additionally, the lecture highlights a **trade-off between complexity and interpretability**: advanced classifiers like Random Forests and Support Vector Machines offer high accuracy but might become "black boxes," reducing interpretability.
 :::
 
 ## Applications
 
-::::: {style="text-align: justify;"}
-
+::: {style="text-align: justify;"}
 While the summary emphasized algorithmic approaches (e.g., Random Forests (RF), Support Vector Machines (SVM)), another critical distinction in classification methods we covered this week lies in **supervised** and **unsupervised** techniques, each offering unique applications. Unsupervised approaches, like k-means clustering, identify natural groupings without prior labels, offering flexibility for exploratory tasks where the goal is discovery rather than prediction. On the other hand, Supervised classification, where algorithms like Random Forests or SVM are trained on labeled datasets, excels in precise, goal-driven tasks. Both algorithms, are supervised learning methods, but they differ significantly in their approach, data handling, and performance characteristics. Here I’ll focus on highlighting that:
 
-**- SVM: **
+**- SVM:**
 
 Similar to logistic regression, SVM minimizes generalization error without distribution assumptions, **separating classes** (e.g., forest vs. farmland) through an optimal hyperplane. It excels in high-dimensional applications, one example is detecting oil spills in synthetic aperture radar (SAR) imagery for environmental monitoring. Matkan et al. (2013) applied SVM to SAR images from the Gulf of Mexico, achieving high accuracy by training on texture and intensity features to differentiate oil-contaminated water from clean surfaces. Optimal performance required tuning parameters C (regularization) and gamma (kernel scale) through grid search and cross-validation, ensuring a balance between margin maximization and classification precision. **However**, this tuning process is computationally demanding, particularly for large datasets, and SVM’s limited interpretability—offering no direct insight into feature contributions—may restrict its use in applications requiring transparent decision-making, such as policy reporting for spill response strategies.
 
-
-**- RF: **
+**- RF:**
 
 This methods ability to **quantify feature importance** makes it valuable for various applications. One example is its role in analyzing burn severity drivers, as demonstrated by Huang et al. (2020) in California’s coastal mountains. Their study used RF to model burn severity, identifying slope, aspect, fuel moisture, and long-term climate as key predictors. During droughts, RF revealed that low fuel moisture and high climatic water deficit doubled high-severity burn areas. **However**, while efficient and interpretable, this approach may **oversimplify** localized fire behavior, particularly in heterogeneous landscapes where small differences in terrain or fuel types affect fire intensity. Additionally, correlated features (e.g., temperature and drought indices) can distort importance rankings, requiring careful variable selection.
-
 
 <figure style=" text-align: center;">
 
@@ -41,15 +38,18 @@ Figure 1 - RF Vs SVM approach. <br> <a href="https://cambridgecoding.wordpress.c
 </figcaption>
 
 </figure>
-:::::
+:::
 
 ## Reflections
+::: {style="text-align: justify;"}
+
 
 Reflecting on this lecture, I found it easy to follow and connect with, probably because classification appears in many familiar research areas like city planning or detecting change. Before this, I had some knowledge of machine learning, but not within remote sensing.
 
 A few years ago, in 2020, I attempted to detect building footprints in Riyadh using an Esri machine learning tool. The results were inaccurate, and at the time, I assumed buildings shared similar traits like materials across regions. I didn’t fully understand how Riyadh’s buildings differ in spectral and structural characteristics from those in the tool’s training data and the big impact this has. Now, I see how methods like SVM classification, introduced in the lecture, could improve such work by adjusting to local details.
 
 The lecture also raised a broader consideration: the tendency to utilize the most accurate tools without considering their suitability for a given problem. The lecture showed Maximum Likelihood isn’t used much anymore because it can’t keep up with today’s messy data (Richards, 2006), which makes me think: how often do we pick flashy tech over what actually works for the problem?
+:::
 
 
 ## References

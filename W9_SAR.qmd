@@ -14,8 +14,6 @@ In the introduction page of this diary, I briefly discussed the distinction betw
 SAR emits radiofrequency pulses toward Earth’s surface from a moving platform, like a satellite. These radar waves bounce back after interacting with features below, carrying information about their size, orientation, composition, and texture. In radar systems, resolution improves with a larger antenna aperture, much like how a bigger aperture in optical cameras boosts light collection for sharper images. Yet, for a satellite to achieve high-resolution Earth imaging, a physical antenna would need to be impractically massive—spanning hundreds of meters. SAR overcomes this limitation by "synthesizing" a large aperture using motion. As the satellite travels along its orbit, it transmits multiple radar pulses and records their reflections (Figure 1) . By combining these signals over time, SAR simulates the effect of a massive antenna, achieving high resolution without the need for an impractical physical structure. While groundbreaking, this approach has inherent limitations. The technique's dependence on precise motion makes it sensitive to platform stability - even minor deviations in the satellite's trajectory can compromise the synthesized aperture, potentially degrading image quality. Additionally, the complex signal processing demands substantial computational resources and introduces geometric distortions that require correction.
 
 ![Figure 1 - Depiction of synthetically increasing aperture for a given sensor and using concepts from camera optics to analogize the processes. - Source: [Esri](https://www.esri.com/arcgis-blog/products/arcgis-pro/imagery/introduction-to-synthetic-aperture-radar/){target="_blank"}](images/Spatial-resolution-GIF_W9.gif){fig-align="center"}
-
-
 :::
 
 ::: {style="text-align: justify;"}
@@ -31,3 +29,43 @@ carousel("gallery-carousel", 5000,
 :::
 
 Figure 2 - SAR Backscatter Mechanisms - Source: \[[`EUSI`](https://www.euspaceimaging.com/blog/2024/04/05/what-is-sar-imagery/)\]
+
+## Applications
+
+::: {style="text-align: justify;"}
+SAR applications are diverse, ranging from change detection, disaster response, environmental monitoring, and surveillance, each tapping into its unique microwave imaging strengths. Here, I’ll focus on two applications demonstrating SAR’s versatility in addressing fundamentally different challenges.
+
+### Multi-temporal SAR analysis
+
+For environmental monitoring, multi-temporal SAR analysis enables reliable wildfire tracking where optical sensors fail due to smoke and darkness. Recent research by Ban et al. (2020) demonstrates how multi-temporal SAR analysis enables near real-time fire progression tracking using Sentinel-1 C-band data. Their approach combines log-ratio change detection of pre- and post-fire backscatter with deep learning (CNN) to automatically identify burn areas, achieving over 90% accuracy in some forested areas. They highlighted key challenges: **burnt and dry grass yield similar C-band backscatter** (complicating detection), and **steep terrain causing false positives**, which they addressed through multi-polarization analysis, L-band SAR integration, and optical data fusion. **However**, their validation framework raises concerns: training and validation datasets were randomly selected from the same geographical regions, risking spatial autocorrelation. This could inflate the reported 90% accuracy, as nearby pixels may share environmental context rather than reflect the CNN’s generalizable detection capability, potentially reducing performance in new regions with distinct terrain or vegetation.
+
+### SAR-Based Oil Tank Measurement
+
+In industrial infrastructure monitoring, SAR can provide precise measurement of Oil storage tanks. infrastructure. Ursa Space Systems employs Sentinel-1 C-band data to measure oil volume by the height of the floating lids in tanks, where higher lids indicate more oil quantity (Figure 3). As simple this approach seems, the blog highlights some challenges such as distinguishing tank signals from nearby infrastructure, handling signal interference from multiple adjacent tanks, and ensuring consistent imagery. They emphasize overcoming challenges like cloud cover, which hampers optical sensors, by sourcing consistent imagery from multiple SAR vendors.
+
+![Figure 3 - Process of measurin oil volume . - Source: [URSA Space](https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/){target="_blank"}](images/SAR-Oil-Tanks-GIF_W9.gif){fig-align="center"}
+:::
+
+## Reflections
+
+::: {style="text-align: justify;"}
+During the course, I was wondering why we were focusing more on optical sensors and weather SAR was mostly used for applications to solve correction issues like clouds for example. But now I realized how SAR’s unique capabilities extend far beyond "filling gaps." Its ability to penetrate sand, smoke, and vegetation, while measuring millimeter-scale changes, offers insights optical sensors simply cannot provide.
+
+When I was writing the applications sections, I read a lot of papers from different domains just to see and expand my knowledge to see the diversity. An interesting paper was [this](https://www.jpl.nasa.gov/images/pia01721-space-radar-image-of-the-lost-city-of-ubar/){target="_blank"}, which highlighted how SAR images revealed buried ruins of Ubar city in Oman, emphasizing SAR’s ability to sand and uncover ancient subsurface structures invisible to optical sensors! Also, it’s interesting to see how researchers increasingly combine SAR and optical data to create more robust solutions. For example, optical sensors might classify land cover, while SAR detects subtle structural or moisture changes beneath the surface. This synergy mirrors a broader lesson: integrating diverse methods often yields richer results than relying on a single approach.
+
+Building on this, I’ll defiantly try to explore SAR’s potential for studying sandstorms, which is an interest I’ve touched upon before in this diary. As it’s a not a common global phenomena, there’s limited global research on it. sandstorms pose unique challenges: optical sensors fail during the event, while SAR’s penetration could track dust movement or subsurface impacts. By fusing SAR’s all-weather resilience with optical data’s intuitive clarity, I hope to develop a more comprehensive understanding of these events.
+:::
+
+
+## References
+
+::: {style="text-align: left; font-size: 13px;"}
+
+Ban, Y., Zhang, P., Nascetti, A. et al. Near Real-Time Wildfire Progression Monitoring with Sentinel-1 SAR Time Series and Deep Learning. Sci Rep 10, 1322 (2020). https://doi.org/10.1038/s41598-019-56967-x
+
+Campbell, B. A. (Bruce A. (2002). Radar remote sensing of planetary surfaces / Bruce A. Campbell. Cambridge University Press.
+
+Geoffrey Craig.  (2020). An inside look at SAR-based measurements. URSA. Available at: https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/
+
+
+:::

@@ -13,7 +13,7 @@ This week’s lecture is a continuation of classification related concepts, it w
 
 ::: {style="text-align: justify;"}
 
-Related content is explained in detail in the upcoming application section, where it makes sense to present it alongside practical examples. I opted not to explain it here to avoid redundancy and maintain conciseness.
+Related content is explained in detail in the upcoming application section, where it makes sense to present it alongside practical examples. I opted not to explain it here to avoid redundancy.
 :::
 
 ### Evaluation and Performance Metrics 
@@ -68,7 +68,7 @@ Pixel-based methods classify individual pixels based solely on their spectral si
 
 :::
 
-These limitations highlight a deeper issue: pixel-based methods assume spectral data alone can tell the full story, ignoring the spatial relationships that define urban complexity. This raises doubts about their suitability for tasks high level of details, where material diversity and small-scale layouts challenge spectral clarity. **Could over-reliance on this method lead to oversimplified conclusions in rapidly changing cities?**
+These limitations highlight a deeper issue: pixel-based methods assume spectral data alone can tell the full story, ignoring the spatial relationships that define urban complexity. This raises doubts about their suitability for tasks with high level of details, where material diversity and small-scale layouts challenge spectral clarity. **Could over-reliance on this method lead to oversimplified conclusions in rapidly changing cities?**
 
 **2. Object-Based Classification: A Spatial-Spectral Solution**
 
@@ -96,6 +96,7 @@ This methodological evolution has established object-based approaches as the sta
 :::::
 
 ## Reflections
+::: {style="text-align: justify;"}
 
 The tension between methodological rigor and practical implementation proves especially significant in emerging fields like climate resilience planning. While spatially blocked cross-validation effectively addresses spatial autocorrelation (Roberts et al., 2017), its static geographic partitions may not adequately capture dynamic systems where spatial relationships evolve over time.
 
@@ -104,6 +105,7 @@ This limitation highlights a broader conceptual shift in geospatial analysis—f
 •	Disaster response systems could employ adaptive significance metrics, with error costs scaling dynamically based on event likelihood
 
 These observations resonate particularly with my planned dissertation work on detection methodologies. The choice between pixel-based and object-based approaches—a fundamental analytical decision—directly influences detectable patterns and outcomes. This realization underscores the need for deeper investigation into how methodological selections shape research findings across different applications
+::: 
 
 ## References
 

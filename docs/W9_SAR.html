@@ -180,6 +180,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#how-does-sar-work" id="toc-how-does-sar-work" class="nav-link" data-scroll-target="#how-does-sar-work"><span class="header-section-number">8.1.1</span> How does SAR Work?</a></li>
   </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">8.3</span> Reflections</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -278,6 +281,42 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 2 - SAR Backscatter Mechanisms - Source: [<a href="https://www.euspaceimaging.com/blog/2024/04/05/what-is-sar-imagery/"><code>EUSI</code></a>]</p>
+</section>
+<section id="applications" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
+<div style="text-align: justify;">
+<p>SAR applications are diverse, ranging from change detection, disaster response, environmental monitoring, and surveillance, each tapping into its unique microwave imaging strengths. Here, I’ll focus on two applications demonstrating SAR’s versatility in addressing fundamentally different challenges.</p>
+<section id="multi-temporal-sar-analysis" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="multi-temporal-sar-analysis"><span class="header-section-number">8.2.1</span> Multi-temporal SAR analysis</h3>
+<p>For environmental monitoring, multi-temporal SAR analysis enables reliable wildfire tracking where optical sensors fail due to smoke and darkness. Recent research by Ban et al.&nbsp;(2020) demonstrates how multi-temporal SAR analysis enables near real-time fire progression tracking using Sentinel-1 C-band data. Their approach combines log-ratio change detection of pre- and post-fire backscatter with deep learning (CNN) to automatically identify burn areas, achieving over 90% accuracy in some forested areas. They highlighted key challenges:&nbsp;<strong>burnt and dry grass yield similar C-band backscatter</strong>&nbsp;(complicating detection), and&nbsp;<strong>steep terrain causing false positives</strong>, which they addressed through multi-polarization analysis, L-band SAR integration, and optical data fusion. <strong>However</strong>, their validation framework raises concerns: training and validation datasets were randomly selected from the same geographical regions, risking spatial autocorrelation. This could inflate the reported 90% accuracy, as nearby pixels may share environmental context rather than reflect the CNN’s generalizable detection capability, potentially reducing performance in new regions with distinct terrain or vegetation.</p>
+</section>
+<section id="sar-based-oil-tank-measurement" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="sar-based-oil-tank-measurement"><span class="header-section-number">8.2.2</span> SAR-Based Oil Tank Measurement</h3>
+<p>In industrial infrastructure monitoring, SAR can provide precise measurement of Oil storage tanks. infrastructure. Ursa Space Systems employs Sentinel-1 C-band data to measure oil volume by the height of the floating lids in tanks, where higher lids indicate more oil quantity (Figure 3). As simple this approach seems, the blog highlights some challenges such as distinguishing tank signals from nearby infrastructure, handling signal interference from multiple adjacent tanks, and ensuring consistent imagery. They emphasize overcoming challenges like cloud cover, which hampers optical sensors, by sourcing consistent imagery from multiple SAR vendors.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/SAR-Oil-Tanks-GIF_W9.gif" class="img-fluid figure-img"></p>
+<figcaption>Figure 3 - Process of measurin oil volume . - Source: <a href="https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/" target="_blank">URSA Space</a></figcaption>
+</figure>
+</div>
+</section>
+</div>
+</section>
+<section id="reflections" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">8.3</span> Reflections</h2>
+<div style="text-align: justify;">
+<p>During the course, I was wondering why we were focusing more on optical sensors and weather SAR was mostly used for applications to solve correction issues like clouds for example. But now I realized how SAR’s unique capabilities extend far beyond “filling gaps.” Its ability to penetrate sand, smoke, and vegetation, while measuring millimeter-scale changes, offers insights optical sensors simply cannot provide.</p>
+<p>When I was writing the applications sections, I read a lot of papers from different domains just to see and expand my knowledge to see the diversity. An interesting paper was <a href="https://www.jpl.nasa.gov/images/pia01721-space-radar-image-of-the-lost-city-of-ubar/" target="_blank">this</a>, which highlighted how SAR images revealed buried ruins of Ubar city in Oman, emphasizing SAR’s ability to sand and uncover ancient subsurface structures invisible to optical sensors! Also, it’s interesting to see how researchers increasingly combine SAR and optical data to create more robust solutions. For example, optical sensors might classify land cover, while SAR detects subtle structural or moisture changes beneath the surface. This synergy mirrors a broader lesson: integrating diverse methods often yields richer results than relying on a single approach.</p>
+<p>Building on this, I’ll defiantly try to explore SAR’s potential for studying sandstorms, which is an interest I’ve touched upon before in this diary. As it’s a not a common global phenomena, there’s limited global research on it. sandstorms pose unique challenges: optical sensors fail during the event, while SAR’s penetration could track dust movement or subsurface impacts. By fusing SAR’s all-weather resilience with optical data’s intuitive clarity, I hope to develop a more comprehensive understanding of these events.</p>
+</div>
+</section>
+<section id="references" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="references"><span class="header-section-number">8.4</span> References</h2>
+<div style="text-align: left; font-size: 13px;">
+<p>Ban, Y., Zhang, P., Nascetti, A. et al.&nbsp;Near Real-Time Wildfire Progression Monitoring with Sentinel-1 SAR Time Series and Deep Learning. Sci Rep 10, 1322 (2020). https://doi.org/10.1038/s41598-019-56967-x</p>
+<p>Campbell, B. A. (Bruce A. (2002). Radar remote sensing of planetary surfaces / Bruce A. Campbell. Cambridge University Press.</p>
+<p>Geoffrey Craig. (2020). An inside look at SAR-based measurements. URSA. Available at: https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/</p>
+</div>
 
 
 </section>
