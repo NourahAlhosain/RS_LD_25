@@ -36,6 +36,8 @@ format:
     theme:
       light: Lux
       dark: Superhero
+      
+      
     title-block-banner: images/Header.png
     title-block-banner-color: White
     include-after-body: "footer.html"
