@@ -5,7 +5,9 @@ project:
 book:
   title: "CASA00023 Learning Diary"
   author: "Norah Alhosain"
-  date: "1/22/2025"
+  date-format: MMMM , YYYY
+
+  
   chapters:
     - index.qmd
     - intro.qmd
@@ -24,13 +26,6 @@ book:
     style: docked
     #background: light
   
-
-
-
-
-
-bibliography: references.bib
-
 format:
   html:
     theme:
