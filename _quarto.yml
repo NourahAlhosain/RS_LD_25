@@ -34,7 +34,7 @@ bibliography: references.bib
 format:
   html:
     theme:
-      light: Lux
+      light: Simplex
       dark: Superhero
       
       
