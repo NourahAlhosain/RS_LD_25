@@ -70,9 +70,9 @@ Figure 3 - Disciplines where GEE has been applied
 
 </figure>
 
-Global Forest Cover Change by Hansen et al. (2013) stands out as one of the pioneering applications in quantifying global forest extent and change in a high-resolution (30-meter) thematic map. This work has become a cornerstone for researchers studying deforestation and forest dynamics at a global scale (Heino et al., 2015; Tyukavina et al., 2017). In addition, GEE has played a critical role in real-time disaster monitoring, such as during the recent California wildfires, where it enabled rapid mapping of fire perimeters, burn severity, and smoke dispersion using satellite data (Anderson, 2025).
+**Global Forest Cover Change** by Hansen et al. (2013) stands out as one of the pioneering applications in quantifying global forest extent and change in a high-resolution (30-meter) thematic map. This work has become a cornerstone for researchers studying deforestation and forest dynamics at a global scale (Heino et al., 2015; Tyukavina et al., 2017). In addition, GEE has played a critical role in real-time disaster monitoring, such as during the recent California wildfires, where it enabled rapid mapping of fire perimeters, burn severity, and smoke dispersion using satellite data (Anderson, 2025).
 
-GEE’s potential extends beyond environmental and disaster applications. By providing access to high-performance computing and vast datasets, it empowers researchers and policymakers to address global challenges with remarkable precision and the ability to scale up solutions. Yet, the platform’s pre-processed datasets and proprietary algorithms, while efficient, may obscure methodological details, complicating replication and potentially reducing trust in results for applications needing rigorous validation.
+GEE’s potential extends beyond environmental and disaster applications. By providing access to high-performance computing and vast datasets, it empowers researchers and policymakers to address global challenges with remarkable precision and the ability to scale up solutions. **Yet**, the platform’s pre-processed datasets and proprietary algorithms, while efficient, may obscure methodological details, complicating replication and potentially reducing trust in results for applications needing rigorous validation.
 :::
 
 ## Reflections

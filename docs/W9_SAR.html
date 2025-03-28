@@ -30,19 +30,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
 <link href="./W8_classification_2.html" rel="prev">
+<link href="./images/browser_icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ec8aea04f645e82bc97295288c67758.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f6810ecb1803f8e861a9dfb6946b5705.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e5bd0a162e714d5041725f65b6a57bef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f6810ecb1803f8e861a9dfb6946b5705.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -200,12 +200,6 @@ background-size: cover;
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -240,7 +234,7 @@ background-size: cover;
 </div>
 <section id="how-does-sar-work" class="level3" style="text-align: justify;" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="how-does-sar-work"><span class="header-section-number">8.1.1</span> How does SAR Work?</h3>
-<p>SAR emits radiofrequency pulses toward Earth’s surface from a moving platform, like a satellite. These radar waves bounce back after interacting with features below, carrying information about their size, orientation, composition, and texture. In radar systems, resolution improves with a larger antenna aperture, much like how a bigger aperture in optical cameras boosts light collection for sharper images. Yet, for a satellite to achieve high-resolution Earth imaging, a physical antenna would need to be impractically massive—spanning hundreds of meters. SAR overcomes this limitation by “synthesizing” a large aperture using motion. As the satellite travels along its orbit, it transmits multiple radar pulses and records their reflections (Figure 1) . By combining these signals over time, SAR simulates the effect of a massive antenna, achieving high resolution without the need for an impractical physical structure. While groundbreaking, this approach has inherent limitations. The technique’s dependence on precise motion makes it sensitive to platform stability - even minor deviations in the satellite’s trajectory can compromise the synthesized aperture, potentially degrading image quality. Additionally, the complex signal processing demands substantial computational resources and introduces geometric distortions that require correction.</p>
+<p><strong>SAR</strong> emits radiofrequency pulses toward Earth’s surface from a moving platform, like a satellite. These radar waves bounce back after interacting with features below, carrying information about their size, orientation, composition, and texture. In radar systems, resolution improves with a larger antenna aperture, much like how a bigger aperture in optical cameras boosts light collection for sharper images. <strong>Yet</strong>, for a satellite to achieve high-resolution Earth imaging, a physical antenna would need to be impractically massive—spanning hundreds of meters. SAR overcomes this limitation by “synthesizing” a large aperture using motion. As the satellite travels along its orbit, it transmits multiple radar pulses and records their reflections (Figure 1) . By combining these signals over time, SAR simulates the effect of a massive antenna, achieving high resolution without the need for an impractical physical structure. While groundbreaking, this approach has inherent limitations. The technique’s dependence on precise motion makes it sensitive to platform stability - even minor deviations in the satellite’s trajectory can compromise the synthesized aperture, potentially degrading image quality. Additionally, the complex signal processing demands substantial computational resources and introduces geometric distortions that require correction.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Spatial-resolution-GIF_W9.gif" class="img-fluid figure-img"></p>
@@ -249,7 +243,7 @@ background-size: cover;
 </div>
 </section>
 <div style="text-align: justify;">
-<p>The reflections SAR captures, known as “backscatter,” vary by scattering mechanism, revealing insights into the surface type of an object (Figure 2). However, surface properties are complicated, Campbell (2002) highlights how these complexities create an “inverse problem” where multiple surface conditions may generate identical backscatter responses.</p>
+<p>The reflections SAR captures, known as “backscatter,” vary by scattering mechanism, revealing insights into the surface type of an object (Figure 2). <strong>However</strong>, surface properties are complicated, Campbell (2002) highlights how these complexities create an “inverse problem” where multiple surface conditions may generate identical backscatter responses.</p>
 <div class="cell g-col-lg-6 g-col-12 g-col-md-12">
 <div class="cell-output-display">
 <div id="gallery-carousel" class="carousel carousel-dark slide" data-bs-ride="false" style="height: 400px;">
@@ -305,7 +299,7 @@ background-size: cover;
 </div>
 </div>
 </div>
-<p>Figure 2 - SAR Backscatter Mechanisms - Source: [<a href="https://www.euspaceimaging.com/blog/2024/04/05/what-is-sar-imagery/"><code>EUSI</code></a>]</p>
+<p>Figure 2 - SAR Backscatter Mechanisms - Source: [<a href="https://www.euspaceimaging.com/blog/2024/04/05/what-is-sar-imagery/" target="_blank"><code>EUSI</code></a>]</p>
 </section>
 <section id="applications" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
@@ -313,11 +307,11 @@ background-size: cover;
 <p>SAR applications are diverse, ranging from change detection, disaster response, environmental monitoring, and surveillance, each tapping into its unique microwave imaging strengths. Here, I’ll focus on two applications demonstrating SAR’s versatility in addressing fundamentally different challenges.</p>
 <section id="multi-temporal-sar-analysis" class="level3" data-number="8.2.1">
 <h3 data-number="8.2.1" class="anchored" data-anchor-id="multi-temporal-sar-analysis"><span class="header-section-number">8.2.1</span> Multi-temporal SAR analysis</h3>
-<p>For environmental monitoring, multi-temporal SAR analysis enables reliable wildfire tracking where optical sensors fail due to smoke and darkness. Recent research by Ban et al.&nbsp;(2020) demonstrates how multi-temporal SAR analysis enables near real-time fire progression tracking using Sentinel-1 C-band data. Their approach combines log-ratio change detection of pre- and post-fire backscatter with deep learning (CNN) to automatically identify burn areas, achieving over 90% accuracy in some forested areas. They highlighted key challenges:&nbsp;<strong>burnt and dry grass yield similar C-band backscatter</strong>&nbsp;(complicating detection), and&nbsp;<strong>steep terrain causing false positives</strong>, which they addressed through multi-polarization analysis, L-band SAR integration, and optical data fusion. <strong>However</strong>, their validation framework raises concerns: training and validation datasets were randomly selected from the same geographical regions, risking spatial autocorrelation. This could inflate the reported 90% accuracy, as nearby pixels may share environmental context rather than reflect the CNN’s generalizable detection capability, potentially reducing performance in new regions with distinct terrain or vegetation.</p>
+<p>For <strong>environmental monitoring</strong>, multi-temporal SAR analysis enables reliable wildfire tracking where optical sensors fail due to smoke and darkness. Recent research by Ban et al.&nbsp;(2020) demonstrates how multi-temporal SAR analysis enables near real-time fire progression tracking using Sentinel-1 C-band data. Their approach combines log-ratio change detection of pre- and post-fire backscatter with deep learning (CNN) to automatically identify burn areas, achieving over 90% accuracy in some forested areas. They highlighted key challenges:&nbsp;<strong>burnt and dry grass yield similar C-band backscatter</strong>&nbsp;(complicating detection), and&nbsp;<strong>steep terrain causing false positives</strong>, which they addressed through multi-polarization analysis, L-band SAR integration, and optical data fusion. <strong>However</strong>, their validation framework raises concerns: training and validation datasets were randomly selected from the same geographical regions, risking spatial autocorrelation. This could inflate the reported 90% accuracy, as nearby pixels may share environmental context rather than reflect the CNN’s generalizable detection capability, potentially reducing performance in new regions with distinct terrain or vegetation.</p>
 </section>
 <section id="sar-based-oil-tank-measurement" class="level3" data-number="8.2.2">
 <h3 data-number="8.2.2" class="anchored" data-anchor-id="sar-based-oil-tank-measurement"><span class="header-section-number">8.2.2</span> SAR-Based Oil Tank Measurement</h3>
-<p>In industrial infrastructure monitoring, SAR can provide precise measurement of Oil storage tanks. infrastructure. Ursa Space Systems employs Sentinel-1 C-band data to measure oil volume by the height of the floating lids in tanks, where higher lids indicate more oil quantity (Figure 3). As simple this approach seems, the blog highlights some challenges such as distinguishing tank signals from nearby infrastructure, handling signal interference from multiple adjacent tanks, and ensuring consistent imagery. They emphasize overcoming challenges like cloud cover, which hampers optical sensors, by sourcing consistent imagery from multiple SAR vendors.</p>
+<p>In <strong>industrial infrastructure monitoring</strong>, SAR can provide precise measurement of Oil storage tanks. Ursa Space Systems employs Sentinel-1 C-band data to measure oil volume by the height of the floating lids in tanks, where higher lids indicate more oil quantity (Figure 3). As simple this approach seems, the blog highlights some challenges such as distinguishing tank signals from nearby infrastructure, handling signal interference from multiple adjacent tanks, and ensuring consistent imagery. They emphasize overcoming challenges like cloud cover, which hampers optical sensors, by sourcing consistent imagery from multiple SAR vendors.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/SAR-Oil-Tanks-GIF_W9.gif" class="img-fluid figure-img"></p>
@@ -499,7 +493,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
+  const darkModeDefault = false;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
@@ -931,9 +925,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
