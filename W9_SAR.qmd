@@ -56,16 +56,12 @@ When I was writing the applications sections, I read a lot of papers from differ
 Building on this, I’ll defiantly try to explore SAR’s potential for studying sandstorms, which is an interest I’ve touched upon before in this diary. As it’s a not a common global phenomena, there’s limited global research on it. sandstorms pose unique challenges: optical sensors fail during the event, while SAR’s penetration could track dust movement or subsurface impacts. By fusing SAR’s all-weather resilience with optical data’s intuitive clarity, I hope to develop a more comprehensive understanding of these events.
 :::
 
-
 ## References
 
 ::: {style="text-align: left; font-size: 13px;"}
-
 Ban, Y., Zhang, P., Nascetti, A. et al. Near Real-Time Wildfire Progression Monitoring with Sentinel-1 SAR Time Series and Deep Learning. Sci Rep 10, 1322 (2020). https://doi.org/10.1038/s41598-019-56967-x
 
 Campbell, B. A. (Bruce A. (2002). Radar remote sensing of planetary surfaces / Bruce A. Campbell. Cambridge University Press.
 
-Geoffrey Craig.  (2020). An inside look at SAR-based measurements. URSA. Available at: https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/
-
-
+Geoffrey Craig. (2020). An inside look at SAR-based measurements. URSA. Available at: https://ursaspace.com/blog/an-inside-look-at-sar-based-measurements/
 :::
