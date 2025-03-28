@@ -211,10 +211,12 @@ background-size: cover;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#green-riyadh-initiative" id="toc-green-riyadh-initiative" class="nav-link active" data-scroll-target="#green-riyadh-initiative"><span class="header-section-number">4.1</span> Green Riyadh Initiative</a></li>
-  <li><a href="#use-of-eo-data" id="toc-use-of-eo-data" class="nav-link" data-scroll-target="#use-of-eo-data"><span class="header-section-number">4.2</span> Use of EO Data</a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.3</span> Reflections</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.4</span> References</a></li>
+  <li><a href="#green-riyadh-initiative" id="toc-green-riyadh-initiative" class="nav-link active" data-scroll-target="#green-riyadh-initiative"><span class="header-section-number">4.1</span> Green Riyadh Initiative</a>
+  <ul class="collapse">
+  <li><a href="#use-of-eo-data" id="toc-use-of-eo-data" class="nav-link" data-scroll-target="#use-of-eo-data"><span class="header-section-number">4.1.1</span> Use of EO Data</a></li>
+  </ul></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.2</span> Reflections</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.3</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -248,9 +250,8 @@ background-size: cover;
 <p>Below is a video that gives an overview about the the initiative:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/qo0bFcQ1238" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
-</section>
-<section id="use-of-eo-data" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="use-of-eo-data"><span class="header-section-number">4.2</span> Use of EO Data</h2>
+<section id="use-of-eo-data" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="use-of-eo-data"><span class="header-section-number">4.1.1</span> Use of EO Data</h3>
 <div style="text-align: justify;">
 <p>In this section, I’ll focus on how remotely sensed data can support a key objective of the Green Riyadh Initiative: reducing urban heat. While the initiative’s published documents do not explicitly mention the use of EO data, the reported progress suggests that change detection and monitoring are likely being employed. The initiative identifies specific areas and priorities for afforestation, with targeted numbers for different categories such as neighborhood gardens, parking sites, and valleys.</p>
 <p>Thermal imagery from satellites like Landsat 8 and Sentinel-3 is one key application to evaluate land surface temperature (LST) reductions after tree planting (Figure 1), as demonstrated in studies like Sadek et al.&nbsp;(2020) and Xu et al.&nbsp;(2023). However,&nbsp;incorporating LiDAR and high-resolution multispectral data (e.g., from Sentinel-2) can take this a step further by enabling precise microclimate mapping. LiDAR’s ability to map canopy height (<a href="https://meta-forest-monitoring-okw37.projects.earthengine.app/view/canopyheight" target="_blank">link</a>) and density at resolutions down to 1 meter, paired with Sentinel-2’s 10-meter multispectral bands could model localized climate conditions at a granular level. &nbsp;By processing Sentinel-2 data to calculate vegetation indices like the Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI), planners can monitor the health, photosynthesis, and transpiration of Riyadh’s urban greenery. These indices, when overlaid with canopy maps, could generate microclimate maps allowing for targeted afforestation efforts where tree planting can have the most significant cooling impact.</p>
@@ -270,15 +271,16 @@ background-size: cover;
 </div>
 </div>
 </section>
-<section id="reflections" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> Reflections</h2>
+</section>
+<section id="reflections" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.2</span> Reflections</h2>
 <div style="text-align: justify;">
 <p>With the big transformation Riyadh is seeing these years, it was challenging to identify a single policy or a challenge that EO can support, but the Green Riyadh Initiative stands out for its citywide reach. Shaded walkways, new parks, and increased pedestrian activity are visible changes, but whether these efforts meaningfully reduce LST remains unclear without EO data. This highlights a critical gap: without leveraging remote sensing technologies, we cannot fully understand or measure the success of such initiatives. While researching I came across an intriguing finding from an urban scale study on one of Riyadh’s neighborhoods by Haddad et al.&nbsp;(2024). They highlighted how non-irrigated plants help cool cities at night but aren’t very effective during the day, whereas Irrigated trees are the best option for cooling cities both day and night. This aligns with micro-scale studies, such as&nbsp;Zölch et al.&nbsp;(2016), which emphasize the importance of detailed EO data in understanding localized climate impacts and optimizing urban greening strategies.</p>
 <p>On a broader note, although not related to my use case, one of the key examples that highlight EO data’s power comes from the&nbsp;International Energy Agency (IEA). In 2022, they <a href="https://www.iea.org/news/methane-emissions-from-the-energy-sector-are-70-higher-than-official-figures" target="_blank"><code>reported</code></a> that satellite imagery revealed methane emissions from the energy sector to be&nbsp;<strong>70% higher</strong>&nbsp;than official government reports. This underscores EO’s potential to provide accurate, actionable insights that can drive policy decisions. In conclusion, incorporating EO data into more policies isn’t just an enhancement—it’s essential for grounding decisions in evidence, ensuring initiatives like Green Riyadh deliver measurable benefits, and tackling global challenges with precision and accountability.</p>
 </div>
 </section>
-<section id="references" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="references"><span class="header-section-number">4.4</span> References</h2>
+<section id="references" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="references"><span class="header-section-number">4.3</span> References</h2>
 <div style="text-align: left; font-size: 13px;">
 <p>Alghamdi, A. S., Alzhrani, A. I., &amp; Alanazi, H. H. (2021). Local Climate Zones and Thermal Characteristics in Riyadh City, Saudi Arabia. <em>Remote Sensing</em>,&nbsp;<em>13</em>(22), 4526. https://doi.org/10.3390/rs13224526</p>
 <p>Gössling, S. (2020). Why cities need to take road space from cars - and how this could be done.&nbsp;<em>Journal of Urban Design</em>,&nbsp;<em>25</em>(4), 443–448. <a href="https://doi.org/10.1080/13574809.2020.1727318" class="uri">https://doi.org/10.1080/13574809.2020.1727318</a></p>

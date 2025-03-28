@@ -35,7 +35,7 @@ Below is a video that gives an overview about the the initiative:
 {{< video https://www.youtube.com/watch?v=qo0bFcQ1238&ab_channel=RiyadhGreen >}}
 :::
 
-## Use of EO Data
+### Use of EO Data
 
 ::: {style="text-align: justify;"}
 In this section, I’ll focus on how remotely sensed data can support a key objective of the Green Riyadh Initiative: reducing urban heat. While the initiative’s published documents do not explicitly mention the use of EO data, the reported progress suggests that change detection and monitoring are likely being employed. The initiative identifies specific areas and priorities for afforestation, with targeted numbers for different categories such as neighborhood gardens, parking sites, and valleys.
