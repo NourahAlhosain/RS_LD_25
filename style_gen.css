@@ -2,6 +2,6 @@
 
 /* to add space before title*/
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1, h2, .h2,  {
     margin-top: 84px;
 }
