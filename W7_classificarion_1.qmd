@@ -1,5 +1,6 @@
 ---
 title: "Classification I"
+css: style_gen.css
 ---
 
 ## Summary
@@ -41,16 +42,14 @@ Figure 1 - RF Vs SVM approach. <br> <a href="https://cambridgecoding.wordpress.c
 :::
 
 ## Reflections
+
 ::: {style="text-align: justify;"}
-
-
 Reflecting on this lecture, I found it easy to follow and connect with, probably because classification appears in many familiar research areas like city planning or detecting change. Before this, I had some knowledge of machine learning, but not within remote sensing.
 
 A few years ago, in 2020, I attempted to detect building footprints in Riyadh using an Esri machine learning tool. The results were inaccurate, and at the time, I assumed buildings shared similar traits like materials across regions. I didn’t fully understand how Riyadh’s buildings differ in spectral and structural characteristics from those in the tool’s training data and the big impact this has. Now, I see how methods like SVM classification, introduced in the lecture, could improve such work by adjusting to local details.
 
 The lecture also raised a broader consideration: the tendency to utilize the most accurate tools without considering their suitability for a given problem. The lecture showed Maximum Likelihood isn’t used much anymore because it can’t keep up with today’s messy data (Richards, 2006), which makes me think: how often do we pick flashy tech over what actually works for the problem?
 :::
-
 
 ## References
 

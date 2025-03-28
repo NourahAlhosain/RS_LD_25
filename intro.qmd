@@ -1,9 +1,6 @@
 ---
 title: "Introduction to Remote Sensing"
-title-block-banner: images/H1.png
-
-
-
+css: style_gen.css
 ---
 
 ## Summary

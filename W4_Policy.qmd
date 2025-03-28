@@ -1,5 +1,6 @@
 ---
 title: "EO Data in Policy Making"
+css: style_gen.css
 ---
 
 This week, we explored how Earth Observation (EO) data can support policymaking. Below is a usecase illustrating how EO data can address a metropolitan policy challenge in Riyadh.

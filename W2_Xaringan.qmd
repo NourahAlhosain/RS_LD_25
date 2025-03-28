@@ -1,5 +1,6 @@
 ---
 title: "Xaringan Tool"
+css: style_gen.css
 ---
 
 ::: {style="text-align: justify;"}
@@ -15,6 +16,7 @@ xaringanExtra::embed_xaringan(url = "https://nourahalhosain.github.io/RS_Xaringa
 ```
 
 ## Reflections on Xaringan
+
 ::: {style="text-align: justify;"}
 Since taking CASA005 last term, I have been curious about how course materials are created. I often find myself sharing presentations via email, only to have to resend them after updates, which made me eager to try Xaringan! Initially, I felt a bit disappointed to learn that it is an R-based package, as I’m not the biggest fan of R and don’t find it particularly intuitive—mostly because I've used it primarily for statistical analysis in the past. However, I feel more comfortable with R now, having used it in various courses.
 

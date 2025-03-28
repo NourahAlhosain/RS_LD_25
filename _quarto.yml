@@ -16,14 +16,16 @@ book:
     - W7_classificarion_1.qmd
     - W8_classification_2.qmd
     - W9_SAR.qmd
-    - references.qmd
   search: true
   #repo-url: 
  # title-block-banner: true
- # favicon: logo.png
+  favicon: images/browser_icon.png
   sidebar:
     style: docked
-    background: light
+    #background: light
+  
+
+
 
 
 
@@ -32,8 +34,15 @@ bibliography: references.bib
 format:
   html:
     theme:
-      - Simplex
-      - brand
+      light: Lux
+      dark: Superhero
+    title-block-banner: images/Header.png
+    title-block-banner-color: White
+    include-after-body: "footer.html"
+    include-in_header: "browser-icon.html" 
+  
+      
+
   pdf:
     documentclass: scrreprt
 #  epub:

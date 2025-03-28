@@ -1,5 +1,6 @@
 ---
 title: "Google Earth Engine (GEE)"
+css: style_gen.css
 ---
 
 ## Introduction to GEE
@@ -80,7 +81,6 @@ GEE’s potential extends beyond environmental and disaster applications. By pro
 This week, one main thought that continually came to my mind while learning more about GEE is why it hasn’t been more widely adopted by governments and large companies, especially given its real-time capabilities and open-access model. While GEE is still popular among researchers and environmental scientists for its ability to process vast amounts of satellite data quickly, its reliance on coding (JavaScript or Python) can be a significant barrier for non-technical users. In contrast, Esri’s ArcGIS dominates in global policy and spatially based applications, offering a comprehensive, enterprise-grade GIS suite with user-friendly interfaces like ArcGIS Pro and ArcGIS Online. These features make Esri more accessible for policymakers and organizations that may lack technical expertise but require robust tools for decision-making. However, Esri’s dominance raises concerns about accessibility for underfunded regions and institutions that cannot afford proprietary software licenses. GEE’s open-access model has the potential to democratize geospatial analysis, particularly in developing countries or smaller organizations, but its steep learning curve and lack of intuitive graphical interfaces limit its broader adoption. Additionally, GEE’s cloud-based nature, while powerful, can be a limitation for users handling sensitive data that requires offline processing. That said, despite GEE’s established collaborations with the United Nations and NGOs—such as UNEP and FAO for environmental monitoring and disaster response—I think its niche as a coding-heavy, research-focused tool limits its appeal for widespread governmental and corporate use compared to Esri’s enterprise-ready solutions. GEE could expand its influence by enhancing user-friendly interfaces, integrating AI automation, and forming deeper enterprise partnerships, potentially complementing Esri’s strengths to create a more inclusive geospatial ecosystem for global policy and decision-making.
 
 Personally, I haven’t used GEE directly, as my employer relies on an enterprise Esri solution that provides a robust GIS framework for our geospatial needs. However, I’ve indirectly utilized its data catalogue by accessing satellite imagery processed through GEE and integrated into our Esri workflows.
-
 :::
 
 ## References
