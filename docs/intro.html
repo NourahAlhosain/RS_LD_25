@@ -68,6 +68,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(images/H1.png);
+background-size: cover;
+      }
+</style>
 
 
 </head>
@@ -75,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -91,7 +98,23 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -184,25 +207,10 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="summary" class="level2" data-number="1.1">
@@ -230,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="applications" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
 <div style="text-align: justify;">
-<p>Building on our understanding of sensor types and resolution characteristics from this week’s lecture, I’ll explore how these technical specifications translate to real-world problem-solving within climate-related initiatives. Passive sensors, like those on Landsat 8, leverage sunlight to capture multispectral data across 11 spectral bands, enabling high spectral resolution (30m spatial resolution) that proves invaluable for long-term climate impact monitoring. For instance, Landsat’s thermal infrared band (Band 10) has been critical in tracking urban heat island effects with a 100m resolution, while its visible and near-infrared bands support vegetation health assessments through NDVI calculations (USGS, 2021). However, these capabilities come with inherent constraints - the 16-day revisit period (U.S. Geological Survey, 2023) and cloud sensitivity create temporal gaps that complicate real-time climate event monitoring.</p>
-<p>This is where active sensor systems like GEDI (Global Ecosystem Dynamics Investigation) demonstrate their complementary value. Mounted on the ISS, GEDI’s lidar system penetrates vegetation canopies with laser pulses at 25m resolution, providing precise vertical structure data for carbon stock assessments that passive optical sensors cannot capture (Dubayah et al., 2020). The fusion of these datasets - combining Landsat’s spectral richness with GEDI’s structural measurements - exemplifies how modern climate science overcomes individual sensor limitations</p>
+<p>Building on my understanding of sensor types and resolution characteristics from this week’s lecture, I’ll explore how these technical specifications translate to real-world problem-solving within climate-related initiatives. Passive sensors, like those on Landsat 8, leverage sunlight to capture multispectral data across 11 spectral bands, enabling high spectral resolution (30m spatial resolution) that proves invaluable for long-term climate impact monitoring. For instance, Landsat’s thermal infrared band (Band 10) has been critical in tracking urban heat island effects with a 100m resolution, while its visible and near-infrared bands support vegetation health assessments through NDVI calculations (USGS, 2021). However, these capabilities come with inherent constraints - the 16-day revisit period (U.S. Geological Survey, 2023) and cloud sensitivity create temporal gaps that complicate real-time climate event monitoring.</p>
+<p>This is where active sensor systems like GEDI (Global Ecosystem Dynamics Investigation) demonstrate their complementary value. Mounted on the ISS, GEDI’s lidar system penetrates vegetation canopies with laser pulses at 25m resolution, providing precise vertical structure data for carbon stock assessments that passive optical sensors cannot capture (Dubayah et al., 2020). The fusion of these datasets - combining Landsat’s spectral richness with GEDI’s structural measurements - exemplifies how modern climate science overcomes individual sensor limitations.</p>
 <p>The technical trade-offs extend to temporal resolution considerations. While MODIS offers daily global coverage at 250m-1km resolution - ideal for tracking rapidly evolving phenomena like wildfire smoke plumes - its coarser spatial resolution limits detailed analysis. This has driven the development of hybrid solutions like ESA’s Sentinel-2 constellation, which provides 10-60m resolution with a 5-day revisit at mid-latitudes, significantly improving our ability to monitor deforestation fronts and glacier retreat (Drusch et al., 2012).</p>
 <p>These applications underscore a main takeaway from our lecture: effective climate monitoring requires strategic sensor selection based on specific observational needs. The choice between high spectral resolution (Landsat), frequent temporal coverage (MODIS), or vertical profiling (GEDI) depends fundamentally on whether the research priority is long-term trend analysis, rapid event response, or 3D ecosystem modeling.</p>
 </div>

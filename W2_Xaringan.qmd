@@ -15,3 +15,8 @@ xaringanExtra::embed_xaringan(url = "https://nourahalhosain.github.io/RS_Xaringa
 ```
 
 ## Reflections on Xaringan
+::: {style="text-align: justify;"}
+Since taking CASA005 last term, I have been curious about how course materials are created. I often find myself sharing presentations via email, only to have to resend them after updates, which made me eager to try Xaringan! Initially, I felt a bit disappointed to learn that it is an R-based package, as I’m not the biggest fan of R and don’t find it particularly intuitive—mostly because I've used it primarily for statistical analysis in the past. However, I feel more comfortable with R now, having used it in various courses.
+
+When I started building my slides, the process was challenging. I attempted to follow the suggested Markdown structure, but it felt restrictive compared to the general HTML I was accustomed to. As a result, I found myself using HTML components for elements that were difficult to manage in Markdown. I’m unsure if this is considered bad practice or acceptable as long as it works!
+:::
